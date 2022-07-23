@@ -1,0 +1,51 @@
+// color variables definition 
+$black-2:        #1F2D3D;
+$prata:          #3C4B58;
+
+$theme-colors: (
+    'black-2':              $black-2,
+    'prata':                $prata,
+    'transparent':        #fff0,
+) !default;
+
+// spacers variable definition
+$spacer: 1rem;
+$awe-spacers: (
+    'awe-6':    $spacer * 0.375,
+    'awe-12':   $spacer * 0.75,
+    'awe-32':   $spacer * 2,
+    'awe-40':   $spacer * 2.5,
+    'awe-56':   $spacer * 3.5,
+    'awe-64':   $spacer * 4,
+    'awe-80':   $spacer * 5,
+    'awe-96':   $spacer * 6,
+    'awe-108':  $spacer * 8,
+    'awe-324':  $spacer * 24,
+) !default;
+$enable-negative-margins: true;
+
+// font features variables definition
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-sizes: (
+    10: 10px, 
+    12: 12px, 
+    14: 14px, 
+    16: 16px, 
+    18: 18px, 
+    20: 20px, 
+    24: 24px, 
+    32: 32px, 
+    40: 40px, 
+    72: 72px
+);
+$font-families: (open-sans: 'Open Sans');
+
+$font-weight-thin:          100;
+$font-weight-extra-light:   200;
+$font-weight-light:         300;
+$font-weight-regular:       400;
+$font-weight-medium:        500;
+$font-weight-semi-bold:     600;
+$font-weight-bold:          700;
+$font-weight-extra-bold:    800;
+$font-weight-black:         900;

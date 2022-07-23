@@ -1,0 +1,22 @@
+{
+  "name": "revojus",
+  "version": "1.0.0",
+  "description": "Frontend do site Revojus",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "scss": "sass --watch src/scss/style.scss:dist/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awe-zn/revojus.git"
+  },
+  "author": {
+    "name": "Zadoque Teófilo",
+    "url": "https://github.com/tzadoque",
+    "email": "zadoque.dev@gmail.com"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
