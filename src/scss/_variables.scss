@@ -1,10 +1,48 @@
 // color variables definition 
-$black-2:        #1F2D3D;
-$prata:          #3C4B58;
+$main:                  #010326;
+$main-lighter-3:        #040730;
+$main-lighter-2:        #070C3A;
+$main-lighter-1:        #091044;
+
+$secondary:             #2B4689;
+$secondary-lighter-2:   #4363A6;
+$secondary-lighter-1:   #678BC6;
+$secondary-darker-1:    #183176;
+
+$tertiary:              #E02D3A;
+$tertiary-lighter-1:    #F9515F;
+$tertiary-darker-2:     #C80B18;
+$tertiary-darker-1:     #AD0610;
+
+$darker-4:              #070708;
+$darker-3:              #292C2E;
+$darker-2:              #4D5054;
+$darker-1:              #63666A;
+
+$light-4:               #EBECED;
+$light-3:               #C5C6C7;
+$light-2:               #9D9FA1;
 
 $theme-colors: (
-    'black-2':              $black-2,
-    'prata':                $prata,
+    'main':                 $main,
+    'main-lighter-3':       $main-lighter-3,
+    'main-lighter-2':       $main-lighter-2,
+    'main-lighter-1':       $main-lighter-1,
+    'secondary':            $secondary,
+    'secondary-lighter-2':  $secondary-lighter-2,
+    'secondary-lighter-1':  $secondary-lighter-1,
+    'secondary-darker-1':   $secondary-darker-1,
+    'tertiary':             $tertiary,
+    'tertiary-lighter-1':   $tertiary-lighter-1,
+    'tertiary-darker-2':    $tertiary-darker-2,
+    'tertiary-darker-1':    $tertiary-darker-1,
+    'darker-4':             $darker-4,
+    'darker-3':             $darker-3,
+    'darker-2':             $darker-2,
+    'darker-1':             $darker-1,
+    'light-4':              $light-4,
+    'light-3':              $light-3,
+    'light-2':              $light-2,
     'transparent':        #fff0,
 ) !default;
 
@@ -27,16 +65,12 @@ $enable-negative-margins: true;
 // font features variables definition
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-sizes: (
-    10: 10px, 
-    12: 12px, 
     14: 14px, 
     16: 16px, 
-    18: 18px, 
-    20: 20px, 
     24: 24px, 
     32: 32px, 
     40: 40px, 
-    72: 72px
+    48: 48px
 );
 $font-families: (open-sans: 'Open Sans');
 

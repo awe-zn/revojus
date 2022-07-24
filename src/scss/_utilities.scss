@@ -31,6 +31,14 @@ $utilities: (
     values: pointer,
     class: 'cursor',
   ),
+  'lh': (
+    property: line-height,
+    class: 'lh',
+    values: (
+      '120': 120%,
+      '140': 140%,
+    ),
+  ),
 );
 
 $utilities: map-merge(
