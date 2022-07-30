@@ -1,3 +1,8 @@
 @import 'bootstrap';
 
 @import 'components';
+
+main.main-home {
+  background: url(/dist/img/background-main.jpg) no-repeat;
+  background-size: cover;
+}

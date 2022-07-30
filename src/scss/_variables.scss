@@ -40,6 +40,7 @@ $spacer: 1rem;
 $awe-spacers: (
     'awe-6':    $spacer * 0.375,
     'awe-12':   $spacer * 0.75,
+    'awe-24':   $spacer * 1.5,
     'awe-32':   $spacer * 2,
     'awe-40':   $spacer * 2.5,
     'awe-56':   $spacer * 3.5,
@@ -52,7 +53,7 @@ $awe-spacers: (
 $enable-negative-margins: true;
 
 // font features variables definition
-$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
 $font-sizes: (
     14: 14px, 
     16: 16px, 
@@ -61,7 +62,7 @@ $font-sizes: (
     40: 40px, 
     48: 48px
 );
-$font-families: (lato: 'Lato');
+$font-families: (open-sans: 'Open Sans');
 
 $font-weight-thin:          100;
 $font-weight-extra-light:   200;
