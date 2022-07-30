@@ -1,48 +1,37 @@
 // color variables definition 
-$main:                  #010326;
-$main-lighter-3:        #040730;
-$main-lighter-2:        #070C3A;
-$main-lighter-1:        #091044;
+$main:                  #180E38;
+$main-lighter-2:        #25194D;
+$main-lighter-1:        #322462;
+$main-darker-1:         #0F0826;
 
-$secondary:             #2B4689;
-$secondary-lighter-2:   #4363A6;
-$secondary-lighter-1:   #678BC6;
-$secondary-darker-1:    #183176;
+$secondary:             #BE5037;
+$secondary-lighter-1:   #CD6851;
+$secondary-darker-1:    #9A3018;
 
-$tertiary:              #E02D3A;
-$tertiary-lighter-1:    #F9515F;
-$tertiary-darker-2:     #C80B18;
-$tertiary-darker-1:     #AD0610;
+$darker-3:              #C3C5D9;
+$darker-2:              #63666A;
+$darker-1:              #1F1C27;
 
-$darker-4:              #070708;
-$darker-3:              #292C2E;
-$darker-2:              #4D5054;
-$darker-1:              #63666A;
-
-$light-4:               #EBECED;
-$light-3:               #C5C6C7;
-$light-2:               #9D9FA1;
+$light-4:               #E0E7ED;
+$light-3:               #FAF9FF;
+$light-2:               #F9FAFC;
+$light-1:               #FFFFFF;
 
 $theme-colors: (
     'main':                 $main,
-    'main-lighter-3':       $main-lighter-3,
     'main-lighter-2':       $main-lighter-2,
     'main-lighter-1':       $main-lighter-1,
+    'main-darker-1':        $main-darker-1,
     'secondary':            $secondary,
-    'secondary-lighter-2':  $secondary-lighter-2,
     'secondary-lighter-1':  $secondary-lighter-1,
     'secondary-darker-1':   $secondary-darker-1,
-    'tertiary':             $tertiary,
-    'tertiary-lighter-1':   $tertiary-lighter-1,
-    'tertiary-darker-2':    $tertiary-darker-2,
-    'tertiary-darker-1':    $tertiary-darker-1,
-    'darker-4':             $darker-4,
     'darker-3':             $darker-3,
     'darker-2':             $darker-2,
     'darker-1':             $darker-1,
     'light-4':              $light-4,
     'light-3':              $light-3,
     'light-2':              $light-2,
+    'light-1':              $light-1,
     'transparent':        #fff0,
 ) !default;
 
@@ -63,7 +52,7 @@ $awe-spacers: (
 $enable-negative-margins: true;
 
 // font features variables definition
-$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: 'Lato', sans-serif;
 $font-sizes: (
     14: 14px, 
     16: 16px, 
@@ -72,7 +61,7 @@ $font-sizes: (
     40: 40px, 
     48: 48px
 );
-$font-families: (open-sans: 'Open Sans');
+$font-families: (lato: 'Lato');
 
 $font-weight-thin:          100;
 $font-weight-extra-light:   200;
@@ -85,6 +74,7 @@ $font-weight-extra-bold:    800;
 $font-weight-black:         900;
 
 // Navbar 
+$navbar-padding-y:                  0;
 $navbar-dark-color:                 #E0E7ED;
 $navbar-dark-hover-color:           #E0E7ED;
 $navbar-toggler-padding-y:          .25rem;
