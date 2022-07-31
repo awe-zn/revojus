@@ -1,0 +1,29 @@
+.awe-button {
+  all: unset;
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: $secondary;
+  color: $light-2;
+  font-weight: 700;
+  &:hover {
+    background: $secondary-darker-1;
+    color: $light-2;
+  }
+}
+
+.secondary-button {
+  background: $light-1;
+  border: 1px solid $main-lighter-1;
+  color: $main-lighter-1;
+  font-weight: 600;
+  &:hover {
+    background: rgba($main-lighter-1, 25%);
+    color: $main-lighter-1;
+  }
+}

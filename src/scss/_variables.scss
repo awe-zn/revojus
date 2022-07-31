@@ -40,6 +40,7 @@ $spacer: 1rem;
 $awe-spacers: (
     'awe-6':    $spacer * 0.375,
     'awe-12':   $spacer * 0.75,
+    'awe-16':   $spacer,
     'awe-24':   $spacer * 1.5,
     'awe-32':   $spacer * 2,
     'awe-40':   $spacer * 2.5,
@@ -47,7 +48,7 @@ $awe-spacers: (
     'awe-64':   $spacer * 4,
     'awe-80':   $spacer * 5,
     'awe-96':   $spacer * 6,
-    'awe-108':  $spacer * 8,
+    'awe-128':  $spacer * 8,
     'awe-324':  $spacer * 24,
 ) !default;
 $enable-negative-margins: true;

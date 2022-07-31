@@ -1,0 +1,16 @@
+form#form-contato {
+  border: 2px solid $main-lighter-2;
+  border-radius: 4px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 575.98px) {
+  form#form-contato {
+    padding: 16px;
+  }
+}
+
+// rounded border border-main-lighter-2 border-2 p-awe-16 p-md-awe-40

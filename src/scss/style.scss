@@ -2,7 +2,58 @@
 
 @import 'components';
 
-main.main-home {
-  background: url(/dist/img/background-main.jpg) no-repeat;
-  background-size: cover;
+header {
+  z-index: 999;
+}
+
+main.hero {
+  background: #E0D3E0;
+}
+
+section#sobre .img-style-1 {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    height: 34px;
+    width: 34px;
+    background: url(/dist/img/svg/img-detail.svg);
+    position: absolute;
+    top: -16px;
+    left: -16px;
+  }
+  div {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #be5037;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+}
+
+section#chamado-equipe {
+  background: linear-gradient(
+      321.12deg,
+      rgba(224, 45, 58, 0.5) -10.42%,
+      rgba(0, 0, 0, 0) 75.57%
+    ),
+    #180e38;
+}
+
+@media (min-width: 768px) {
+  main.hero {
+    background: linear-gradient(90deg, #e0d3e0 50%, #f0f5fe 50%);
+    .background-image {
+      background: url(/dist/img/background-hero.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  main.hero .background-image {
+    background-size: contain;
+  }
 }
