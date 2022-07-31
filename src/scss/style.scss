@@ -2,12 +2,20 @@
 
 @import 'components';
 
+body {
+  background: $main-darker-1;
+}
+
 header {
   z-index: 999;
 }
 
 main.hero {
-  background: #E0D3E0;
+  background: #e0d3e0;
+}
+
+main.main-sobre {
+  background: #BA352F;
 }
 
 section#sobre .img-style-1 {
@@ -50,10 +58,24 @@ section#chamado-equipe {
       background-size: cover;
     }
   }
+
+  main.main-sobre {
+    background: linear-gradient(90deg, #ba352f 50.51%, #5d144c 50.52%);
+    .background-image {
+      background: url(/dist/img/img-main-sobre.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
   main.hero .background-image {
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1400px) {
+  main.main-sobre .background-image {
     background-size: contain;
   }
 }
