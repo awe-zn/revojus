@@ -18,8 +18,77 @@ form#form-equipe {
   }
 }
 
+.form-steps {
+  border: 2px solid $secondary;
+  border-radius: 4px;
+  .form-steps__divider {
+    width: 64px;
+    height: 2px;
+    background: $secondary;
+  }
+  .form-step {
+    min-width: 118px;
+    .form-step__number {
+      width: 48px;
+      height: 48px;
+      background: $light-1;
+      color: $secondary;
+      border: 1px solid $secondary;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+      &.active {
+        background: $secondary;
+        color: $light-1;
+      }
+    }
+  }
+}
+
+form#form-servicos {
+  .custom-form-check {
+    display: flex;
+    width: 277px;
+    min-height: 230px;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 32px;
+    gap: 8px;
+    border: 2px solid rgba(50, 36, 98, 0.16);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+
+    input[type="radio"] {
+      all: unset;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -2px;
+      &:checked {
+        border: 2px solid #BE5037;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
 @media (max-width: 575.98px) {
   form#form-contato {
     padding: 16px;
+  }
+
+  .form-steps .form-steps__divider {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .form-steps .form-steps__divider {
+    width: 32px;
   }
 }

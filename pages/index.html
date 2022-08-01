@@ -25,7 +25,7 @@
   <header class="bg-main-darker-1 position-sticky top-0">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand p-0" href="home.html">
+        <a class="navbar-brand p-0" href="index.html">
           <img src="../dist/img/svg/logo.svg" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end text-center text-md-start">
             <li class="nav-item">
-              <a class="nav-link" href="home.html">Página inicial</a>
+              <a class="nav-link" href="index.html">Página inicial</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sobre.html">Sobre nós</a>
@@ -181,6 +181,249 @@
     </div>
   </section>
 
+  <section class="bg-light-1">
+    <div class="container-md">
+      <div class="divider"></div>
+    </div>
+    <div class="container px-awe-32 px-lg-0 pt-awe-80 pb-awe-128">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 d-flex flex-column align-items-center mb-awe-64">
+          <h2
+            class="fz-24 fz-md-32 fz-lg-40 fw-bold text-main border-bottom border-4 border-secondary pb-2 d-inline-block mb-awe-40">
+            Solicite o seu serviço!
+          </h2>
+          <p class="fz-18 text-darker-1 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet egestas mauris. Phasellus at
+            risus at turpis porttitor.
+          </p>
+        </div>
+        <div class="col-12">
+          <form id="form-servicos" action="" class="w-100">
+            <div data-steps="1" class="row justify-content-center">
+              <div
+                class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
+                <div class="form-step d-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number active">
+                    1
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Tipo de pessoa
+                  </p>
+                </div>
+
+                <div class="form-steps__divider"></div>
+
+                <div class="form-step d-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number">
+                    2
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Tipo de serviço
+                  </p>
+                </div>
+
+                <div class="form-steps__divider"></div>
+
+                <div class="form-step d-none d-sm-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number">
+                    3
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Formulário
+                  </p>
+                </div>
+
+              </div>
+              <div class="pt-awe-64">
+                <p class="fz-24 fw-bold text-main text-center mb-awe-40">
+                  Selecione o tipo de pessoa que deseja processar
+                </p>
+                <div
+                  class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-awe-32 gap-md-awe-64">
+                  <div class="custom-form-check">
+                    <img src="/dist/img/svg/physical-person.svg" alt="">
+                    <label class="text-secondary m-0" for="pessoaFisica">
+                      Pessoa física
+                    </label>
+                    <p class="text-center fz-16 text-darker-1 m-0">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <input onclick="nextStep(0, 1)" type="radio" name="tipoDePessoa" id="pessoaFisica">
+                  </div>
+                  <div class="custom-form-check">
+                    <img src="/dist/img/svg/company.svg" alt="">
+                    <label class="text-secondary m-0" for="pessoaJuridica">
+                      Pessoa jurídica
+                    </label>
+                    <p class="text-center fz-16 text-darker-1 m-0">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                    <input onclick="nextStep(0, 1)" type="radio" name="tipoDePessoa" id="pessoaJuridica">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-steps="2" class="d-none row justify-content-center">
+              <div
+                class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
+                <div class="form-step d-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number">
+                    1
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Tipo de pessoa
+                  </p>
+                </div>
+
+                <div class="form-steps__divider"></div>
+
+                <div class="form-step d-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number active">
+                    2
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Tipo de serviço
+                  </p>
+                </div>
+
+                <div class="form-steps__divider"></div>
+
+                <div class="form-step d-none d-sm-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number">
+                    3
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Formulário
+                  </p>
+                </div>
+
+              </div>
+              <div class="pt-awe-64 awe-grid-2">
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+                <div class="custom-form-check">
+                  <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
+                  <label class="text-secondary m-0" for="servico0">
+                    Lorem ipsum
+                  </label>
+                  <p class="text-center fz-16 text-darker-1 m-0">
+                    Lorem ipsum dolor sit amet, consectetur.
+                  </p>
+                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                </div>
+              </div>
+
+            </div>
+            <div data-steps="3" class="d-none">
+              <div
+                class="form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
+                <div class="form-step d-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number">
+                    1
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Tipo de pessoa
+                  </p>
+                </div>
+
+                <div class="form-steps__divider"></div>
+
+                <div class="form-step d-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number">
+                    2
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Tipo de serviço
+                  </p>
+                </div>
+
+                <div class="form-steps__divider"></div>
+
+                <div class="form-step d-none d-sm-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number active">
+                    3
+                  </div>
+                  <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                    Formulário
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="chamado-equipe">
     <div class="container px-awe-32 px-lg-0 pt-lg-awe-32">
       <div class="row">
@@ -268,6 +511,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/src/js/index.js"></script>
 </body>
 
 </html>
