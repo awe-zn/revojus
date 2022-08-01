@@ -6,6 +6,22 @@ body {
   background: $main-darker-1;
 }
 
+a {
+  text-decoration: none;
+  color: $light-2;
+}
+
+.divider {
+  background: linear-gradient(
+    90deg,
+    rgba(190, 80, 55, 0) 0%,
+    #be5037 50.0%,
+    rgba(190, 80, 55, 0) 100%
+  );
+  height: 4px;
+  width: 100%;
+}
+
 header {
   z-index: 999;
 }
@@ -15,7 +31,7 @@ main.hero {
 }
 
 main.main-sobre {
-  background: #BA352F;
+  background: #ba352f;
 }
 
 section#sobre .img-style-1 {

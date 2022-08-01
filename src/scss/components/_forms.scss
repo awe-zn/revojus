@@ -7,10 +7,19 @@ form#form-contato {
   gap: 24px;
 }
 
+form#form-equipe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .form-equipe__fields {
+    width: 100%;
+    max-width: 438px;
+  }
+}
+
 @media (max-width: 575.98px) {
   form#form-contato {
     padding: 16px;
   }
 }
-
-// rounded border border-main-lighter-2 border-2 p-awe-16 p-md-awe-40
