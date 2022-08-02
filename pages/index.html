@@ -299,7 +299,7 @@
 
               </div>
               <div class="pt-awe-64 awe-grid-2">
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -307,9 +307,9 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -317,9 +317,9 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -327,9 +327,9 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -337,9 +337,9 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -347,9 +347,9 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -357,9 +357,9 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -367,9 +367,9 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
-                <div class="custom-form-check">
+                <div class="custom-form-check checkbox">
                   <img src="/dist/img/svg/placeholder-servico.svg" width="72" height="72" alt="">
                   <label class="text-secondary m-0" for="servico0">
                     Lorem ipsum
@@ -377,16 +377,23 @@
                   <p class="text-center fz-16 text-darker-1 m-0">
                     Lorem ipsum dolor sit amet, consectetur.
                   </p>
-                  <input onclick="nextStep(1, 2)" type="radio" name="selectServico" id="servico0">
+                  <input type="checkbox" name="selectServico" id="servico0">
                 </div>
               </div>
-
+              <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
+                <button class="awe-button secondary-button" onclick="prevStep(0, 1)">
+                  Voltar
+                </button>
+                <button class="awe-button primary-button" onclick="nextStep(1, 2)">
+                  Continuar
+                </button>
+              </div>
             </div>
-            <div data-steps="3" class="d-none">
+            <div data-steps="3" class="d-none row justify-content-center">
               <div
-                class="form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
-                <div class="form-step d-flex flex-column align-items-center gap-awe-8">
-                  <div class="form-step__number">
+                class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
+                <div class="form-step d-none d-sm-flex flex-column align-items-center gap-awe-8">
+                  <div class="form-step__number ">
                     1
                   </div>
                   <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
@@ -407,7 +414,7 @@
 
                 <div class="form-steps__divider"></div>
 
-                <div class="form-step d-none d-sm-flex flex-column align-items-center gap-awe-8">
+                <div class="form-step d-sm-flex flex-column align-items-center gap-awe-8">
                   <div class="form-step__number active">
                     3
                   </div>
@@ -415,7 +422,42 @@
                     Formulário
                   </p>
                 </div>
+              </div>
+              <div class="col-12 col-md-10 col-lg-8 mt-awe-56">
+                <div class="border border-2 border-main-lighter-2 rounded-2 py-awe-32 px-awe-16 px-md-awe-40 mb-awe-40">
+                  <p class="fw-bold fz-24 text-main mb-awe-40">
+                    Informações
+                  </p>
+                  <div class="row gap-awe-32 gap-md-0">
+                    <div class="col-12 col-md-6 d-flex flex-column gap-awe-24">
+                      <div>
+                        <label for="">Nome</label>
+                        <input type="text" name="" id="" placeholder="Nome">
+                      </div>
+                      <div>
+                        <label for="">Email</label>
+                        <input type="email" placeholder="email">
+                      </div>
+                      <div>
+                        <label for="">Celular</label>
+                        <input type="tel" name="" id="" placeholder="Número">
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label for="">Mensagem</label>
+                      <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+                    </div>
+                  </div>
+                </div>
 
+              </div>
+              <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
+                <button class="awe-button secondary-button" onclick="prevStep(1, 2)">
+                  Voltar
+                </button>
+                <button id="submitButton" type="submit" class="awe-button primary-button">
+                  Enviar
+                </button>
               </div>
             </div>
           </form>

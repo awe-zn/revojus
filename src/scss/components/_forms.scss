@@ -62,7 +62,8 @@ form#form-servicos {
     position: relative;
     cursor: pointer;
 
-    input[type="radio"] {
+    input[type='radio'],
+    input[type='checkbox'] {
       all: unset;
       display: block;
       width: 100%;
@@ -70,9 +71,13 @@ form#form-servicos {
       position: absolute;
       top: -2px;
       &:checked {
-        border: 2px solid #BE5037;
+        border: 2px solid #be5037;
         border-radius: 4px;
       }
+    }
+
+    &.checkbox {
+      width: 100%;
     }
   }
 }
