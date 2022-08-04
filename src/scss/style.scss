@@ -1,0 +1,94 @@
+@import 'bootstrap';
+
+@import 'components';
+
+body {
+  background: $main-darker-1;
+}
+
+a {
+  text-decoration: none;
+  color: $light-2;
+}
+
+.divider {
+  background: linear-gradient(
+    90deg,
+    rgba(190, 80, 55, 0) 0%,
+    #be5037 50%,
+    rgba(190, 80, 55, 0) 100%
+  );
+  height: 4px;
+  width: 100%;
+}
+
+header {
+  z-index: 999;
+}
+
+main.hero {
+  background: #e0d3e0;
+}
+
+main.main-sobre {
+  background: #ba352f;
+}
+
+section#sobre .img-style-1 {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    height: 34px;
+    width: 34px;
+    background: url(/dist/img/svg/img-detail.svg);
+    position: absolute;
+    top: -16px;
+    left: -16px;
+  }
+  div {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #be5037;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+}
+
+section#chamado-equipe {
+  background: linear-gradient(
+      321.12deg,
+      rgba(224, 45, 58, 0.5) -10.42%,
+      rgba(0, 0, 0, 0) 75.57%
+    ),
+    #180e38;
+}
+
+@media (min-width: 768px) {
+  main.hero {
+    background: linear-gradient(90deg, #e0d3e0 50%, #f0f5fe 50%);
+    .background-image {
+      background: url(/dist/img/background-hero.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  main.main-sobre {
+    background: linear-gradient(90deg, #ba352f 50.51%, #5d144c 50.52%);
+    .background-image {
+      background: url(/dist/img/img-main-sobre.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  main.hero .background-image {
+    background-size: contain;
+  }
+  main.main-sobre .background-image {
+    background-size: contain;
+  }
+}
