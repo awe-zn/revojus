@@ -1,13 +1,28 @@
-form#form-contato {
+form {
+  width: 100%;
+}
+
+#form-contato {
   border: 2px solid $main-lighter-2;
   border-radius: 4px;
   padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  label {
+    width: 100%;
+  }
+
+  br {
+    display: none;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
-form#form-equipe {
+#form-equipe {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -48,7 +63,7 @@ form#form-equipe {
   }
 }
 
-form#form-servicos {
+#form-servicos {
   .custom-form-check {
     display: flex;
     width: 277px;
@@ -62,8 +77,8 @@ form#form-servicos {
     position: relative;
     cursor: pointer;
 
-    input[type='radio'],
-    input[type='checkbox'] {
+    input[type="radio"],
+    input[type="checkbox"] {
       all: unset;
       display: block;
       width: 100%;
@@ -83,7 +98,7 @@ form#form-servicos {
 }
 
 @media (max-width: 575.98px) {
-  form#form-contato {
+  #form-contato {
     padding: 16px;
   }
 
