@@ -17,6 +17,7 @@
     "email": "zadoque.dev@gmail.com"
   },
   "dependencies": {
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "sass": "^1.54.3"
   }
 }
