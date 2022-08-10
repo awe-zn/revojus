@@ -303,44 +303,56 @@
                   </div>
 
                 </div>
-                <div data-subStep="fisica" class="d-none">
-                  <div>
-                    <label for="">
-                      aereo
-                      <input type="radio" name="tipoDeServico" id="" value="aereo">
-                    </label>
-                    <label for="">
-                      jogos
-                      <input type="radio" name="tipoDeServico" id="" value="jogos">
-                    </label>
-                    <label for="">
-                      redes sociais
-                      <input type="radio" name="tipoDeServico" id="" value="redes sociais">
-                    </label>
+                <div class="mt-awe-56 col-12 row justify-content-center">
+                  <div class="col-12 col-lg-4">
+                    <h3 class="fz-24 text-center">
+                      Você está como pessoa <span class="fw-bold">física. Selecione o serviço que deseja</span>
+                    </h3>
                   </div>
-                  <div>
-                    <button onclick="etapa0()">prev</button>
-                    <button onclick="etapa2()" data-button="next" disabled>next</button>
+                </div>
+                <div data-subStep="fisica" class="col-12 col-lg-10 mt-awe-32 d-none">
+                  <div class="awe-grid-3">
+                    <div class="servico-card">
+                      <img src="/dist/img/servicos/aereo.svg" alt="">
+                      <label class="text-secondary m-0">
+                        Aéreo
+                      </label>
+                      <input type="radio" name="tipoDeServico" value="Aéreo">
+                    </div>
+                    <div class="servico-card">
+                      <img src="/dist/img/servicos/jogos.svg" alt="">
+                      <label class="text-secondary m-0">
+                        Jogos
+                      </label>
+                      <input type="radio" name="tipoDeServico" value="Jogos">
+                    </div>
+                  </div>
+                  <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
+                    <button class="awe-button secondary-button" onclick="etapa0()">
+                      Voltar
+                    </button>
+                    <button class="awe-button primary-button" onclick="etapa2()" data-button="next" disabled>
+                      Continuar
+                    </button>
                   </div>
                 </div>
                 <div data-subStep="juridica" class="d-none">
-                  <div>
-                    <label for="">
-                      tributário
-                      <input type="radio" name="tipoDeServico" id="" value="tributário">
-                    </label>
-                    <label for="">
-                      recuperação de crédito
-                      <input type="radio" name="tipoDeServico" id="" value="recuperação de crédito">
-                    </label>
-                    <label for="">
-                      empresarial
-                      <input type="radio" name="tipoDeServico" id="" value="empresarial">
-                    </label>
+                  <div class="awe-grid-3">
+                    <div class="servico-card">
+                      <img src="/dist/img/servicos/tributario.svg" alt="">
+                      <label class="text-secondary m-0">
+                        Tributário
+                      </label>
+                      <input type="radio" name="tipoDeServico" value="Tributário">
+                    </div>
                   </div>
-                  <div>
-                    <button onclick="etapa0()">prev</button>
-                    <button onclick="etapa2()" data-button="next" disabled>next</button>
+                  <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
+                    <button class="awe-button secondary-button" onclick="etapa0()">
+                      Voltar
+                    </button>
+                    <button class="awe-button primary-button" onclick="etapa2()" data-button="next" disabled>
+                      Continuar
+                    </button>
                   </div>
                 </div>
                 <div class="visually-hidden">
@@ -413,7 +425,7 @@
                 </div>
 
                 <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
-                  <button class="awe-button secondary-button" onclick="prevStep(1, 2)">
+                  <button class="awe-button secondary-button" onclick="etapa1()">
                     Voltar
                   </button>
                   <input type="submit" id="submitButton" type="submit" class="awe-button primary-button" />
@@ -425,7 +437,7 @@
                 <div class="col-6">
                   <div class="border border-2 border-main p-awe-24">
                     <div class="d-flex justify-content-center mb-awe-32">
-                      <img src="/dist/img/svg/form-success.svg" alt="">
+                      <img src="/dist/img/svg/form-success.svg">
                     </div>
                     <p class="fz-24 text-main fw-bold mb-awe-16 text-center">
                       Sua solicitação foi enviada com <span class="text-secondary">sucesso</span>!

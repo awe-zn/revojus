@@ -44,6 +44,7 @@ servicos.forEach((servico) => {
 function etapa0() {
   formEtapa0.classList.remove('d-none');
   formEtapa1.classList.add('d-none');
+  
   formSubEtapaPessoaFisica.classList.add('d-none');
   formSubEtapaPessoaJuridica.classList.add('d-none');
   servicos.forEach((servico) => {
@@ -60,6 +61,7 @@ function etapa0() {
 function etapa1(tipoDePessoa) {
   formEtapa0.classList.add('d-none');
   formEtapa1.classList.remove('d-none');
+  formEtapa2.classList.add('d-none');
 
   if (tipoDePessoa === 'fisica') {
     formSubEtapaPessoaFisica.classList.remove('d-none');
