@@ -15,6 +15,11 @@
     background: $secondary-darker-1;
     color: $light-2;
   }
+
+  &:disabled {
+    background: #C3CFD9;
+    cursor: unset;
+  }
 }
 
 .secondary-button {
