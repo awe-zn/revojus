@@ -1,7 +1,6 @@
 <form action="">
   <div data-step="0" class="row justify-content-center">
-    <div
-      class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
+    <div class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
       <div class="form-step d-flex flex-column align-items-center gap-awe-8">
         <div class="form-step__number active">
           1
@@ -68,8 +67,7 @@
     </div>
   </div>
   <div data-step="1" class="row justify-content-center d-none">
-    <div
-      class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
+    <div class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
       <div class="form-step d-flex flex-column align-items-center gap-awe-8">
         <div class="form-step__number">
           1
@@ -170,8 +168,7 @@
     </div>
   </div>
   <div data-step="2" class="row justify-content-center d-none">
-    <div
-      class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
+    <div class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
       <div class="form-step d-flex flex-column align-items-center gap-awe-8">
         <div class="form-step__number">
           1
