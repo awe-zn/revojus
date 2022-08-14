@@ -22,8 +22,15 @@ header {
   z-index: 999;
 }
 
-main.hero {
-  background: #e0d3e0;
+main#hero-index {
+  background: linear-gradient(
+      90deg,
+      rgba(221, 209, 229, 0.375) 0%,
+      rgba(236, 221, 230, 0.645833) 5.73%,
+      rgba(255, 236, 231, 0.75) 28.13%,
+      rgba(253, 251, 252, 0) 56.25%
+    ),
+    #ffffff;
 }
 
 main.main-sobre {
@@ -62,12 +69,13 @@ section#chamado-equipe {
     #180e38;
 }
 
-@media (min-width: 768px) {
-  main.hero {
-    background: linear-gradient(90deg, #e0d3e0 50%, #f0f5fe 50%);
+@media (min-width: 992px) {
+  main#hero-index {
+    background: linear-gradient(90deg, #e9dce4 50%, #f0f5fe 50%);
     .background-image {
-      background: url(/dist/img/background-hero.jpg) no-repeat center;
-      background-size: cover;
+      background: url(/dist/img/hero-index.jpg) no-repeat;
+      background-size: auto;
+      background-position-x: center;
     }
   }
 
@@ -81,8 +89,9 @@ section#chamado-equipe {
 }
 
 @media (min-width: 1400px) {
-  main.hero .background-image {
-    background-size: contain;
+  main#hero-index .background-image {
+    background-position-x: center;
+    background-size: auto;
   }
   main.main-sobre .background-image {
     background-size: contain;

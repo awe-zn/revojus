@@ -26,11 +26,13 @@
       <div class="container-fluid container-lg px-awe-32 px-lg-0 d-flex flex-row-reverse flex-lg-row">
         <div class="flex-fill w-25 d-flex justify-content-center justify-content-lg-start">
           <a class="navbar-brand py-0" href="index.html">
-            <img src="/dist/img/svg/logo.svg" class="img-fluid" alt="" />
+            <img src="/dist/img/svg/logo.svg" class="img-fluid d-none d-sm-block" alt="" />
+            <img src="/dist/img/svg/logo-sm.svg" class="img-fluid d-sm-none" alt="">
           </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon d-none d-sm-block"></span>
+          <img src="/dist/img/svg/menu.svg" class="d-sm-none" alt="">
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-awe-32 py-lg-0 w-100 justify-content-lg-end">
@@ -59,24 +61,36 @@
     </nav>
   </header>
 
-  <section class="bg-light-1">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum dicta molestias consectetur fugiat accusantium nam explicabo vitae. Ab laboriosam aliquam reprehenderit laudantium quisquam accusamus quaerat non amet rerum possimus!</p>
-    <br>
-  </section>
+  <main id="hero-index">
+    <div class="background-image">
+      <div class="container pt-awe-40 pt-xxl-awe-80 pb-awe-80 pb-xxl-awe-128">
+        <div class="row">
+          <div class="col-12 col-lg-6 px-awe-32 px-lg-0">
+            <h1 class="fw-bold fz-24 fz-md-48 text-main mb-awe-40">
+              Somos a <span class="text-secondary">Revojus</span>, <br>
+              uma plataforma que liga as pessoas com a
+              <span class="border-bottom border-4 border-secondary pb-1">justiça</span>
+            </h1>
+            <p class="text-main mb-awe-40 pe-lg-5 fz-16 fz-lg-16">
+              Somos um escritório digital, com advogados especializados em diversas
+              áreas, para levar à você a melhor experiência em resoluções jurídicas.
+            </p>
+            <a href="#servicos" class="awe-button primary-button fz-14 fz-lg-16">              
+              <span class="d-none d-sm-inline-block">
+                Quero resolver o meu caso
+              </span>
+              <span class="d-sm-none">
+                Solicitar serviço
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="d-sm-none">
+        <img src="/dist/img/hero-index-sm.jpg" class="img-fluid w-100" alt="">
+      </div>
+    </div>
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
