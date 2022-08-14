@@ -171,7 +171,7 @@
       </div>
       <div class="col-12">
         <div class="col-12">
-          <div id="form-servicos">
+          <div>
 
             <?php
             $servicos_pessoa_fisica = [
@@ -301,8 +301,9 @@
             ];
             ?>
 
-            <form action="">
+            <div id="form-servicos">
               <div data-step="0" class="row justify-content-center">
+                <!-- barra de progresso -->
                 <div class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
                   <div class="form-step d-flex flex-column align-items-center gap-awe-8">
                     <div class="form-step__number active">
@@ -336,6 +337,7 @@
                   </div>
 
                 </div>
+                <!-- /barra de progresso -->
                 <div class="pt-awe-64">
                   <p class="fz-24 fw-bold text-main text-center mb-awe-40">
                     Selecione o tipo de pessoa que deseja processar
@@ -365,11 +367,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="visually-hidden">
-                  <input type="text" name="tipoDePessoa" id="tipoDePessoaContactForm">
-                </div>
               </div>
-              <div data-step="1" class="row justify-content-center d-none">
+              <div data-step="1" class="d-none row justify-content-center">
+                <!-- barra de progresso -->
                 <div class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
                   <div class="form-step d-flex flex-column align-items-center gap-awe-8">
                     <div class="form-step__number">
@@ -403,6 +403,7 @@
                   </div>
 
                 </div>
+                <!-- /barra de progresso -->
                 <div data-subStep="fisica" class="col-12 col-lg-10 mt-awe-56 d-none">
                   <div class="mb-awe-32 col-12 row justify-content-center">
                     <div class="col-12 col-lg-6">
@@ -425,14 +426,6 @@
 
                     <?php } ?>
                   </div>
-                  <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
-                    <button class="awe-button secondary-button" onclick="etapa0()">
-                      Voltar
-                    </button>
-                    <button class="awe-button primary-button" onclick="etapa2()" data-button="next" disabled>
-                      Continuar
-                    </button>
-                  </div>
                 </div>
                 <div data-subStep="juridica" class="col-12 col-lg-10 mt-awe-56 d-none">
                   <div class="mb-awe-32 col-12 row justify-content-center">
@@ -443,6 +436,7 @@
                     </div>
                   </div>
                   <div class="awe-grid-3">
+
                     <?php foreach ($servicos_pessoa_juridica as $servico) { ?>
 
                       <div class="servico-card">
@@ -455,121 +449,40 @@
 
                     <?php } ?>
                   </div>
-                  <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
-                    <button class="awe-button secondary-button" onclick="etapa0()">
-                      Voltar
-                    </button>
-                    <button class="awe-button primary-button" onclick="etapa2()" data-button="next" disabled>
-                      Continuar
-                    </button>
-                  </div>
                 </div>
-              </div>
-              <div data-step="2" class="row justify-content-center d-none">
-                <div class="col-12 col-md-10 col-lg-7 form-steps px-awe-16 px-md-awe-40 py-awe-16 d-flex justify-content-center justify-content-sm-between align-items-sm-center gap-awe-16 gap-sm-0">
-                  <div class="form-step d-flex flex-column align-items-center gap-awe-8">
-                    <div class="form-step__number">
-                      1
-                    </div>
-                    <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
-                      Tipo de pessoa
-                    </p>
-                  </div>
-
-                  <div class="form-steps__divider"></div>
-
-                  <div class="form-step d-flex flex-column align-items-center gap-awe-8">
-                    <div class="form-step__number">
-                      2
-                    </div>
-                    <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
-                      Tipo de serviço
-                    </p>
-                  </div>
-
-                  <div class="form-steps__divider"></div>
-
-                  <div class="form-step d-none d-sm-flex flex-column align-items-center gap-awe-8">
-                    <div class="form-step__number active">
-                      3
-                    </div>
-                    <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
-                      Formulário
-                    </p>
-                  </div>
-
-                </div>
-
-                <div class="col-12 col-md-10 col-lg-8 mt-awe-56">
-                  <div class="border border-2 border-main-lighter-2 rounded-2 py-awe-32 px-awe-16 px-md-awe-40 mb-awe-40">
-                    <p class="fw-bold fz-24 text-main mb-awe-40">
-                      Informações
-                    </p>
-                    <div class="row gap-awe-32 gap-md-0">
-                      <div class="col-12 col-md-6 d-flex flex-column gap-awe-24">
-                        <div>
-                          <label for="nome">Nome</label>
-                          <input type="text" name="nome" placeholder="Nome" id="nomeInputFalso" require>
-                        </div>
-                        <div>
-                          <label for="email">Email</label>
-                          <input type="email" id="emailInputFalso" placeholder="email" require>
-                        </div>
-                        <div>
-                          <label for="numero">Celular</label>
-                          <input type="tel" name="numero" placeholder="Número" id="numeroInputFalso" require>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-6">
-                        <label for="mensagem">Descreva a situação</label>
-                        <textarea name="mensagem" id="mensagemInputFalso" placeholder="Descreva a situação" cols="30" rows="10" require></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="pt-awe-64 d-flex justify-content-center gap-awe-32">
-                  <button class="awe-button secondary-button" onclick="etapa1()">
+                  <button class="awe-button secondary-button" onclick="etapa0()">
                     Voltar
                   </button>
-                  <input type="submit" value="Enviar" class="awe-button primary-button" id="submitButton">
+                  <button class="awe-button primary-button" onclick="etapa2()" data-button="next" disabled>
+                    Continuar
+                  </button>
                 </div>
               </div>
-            </form>
-
-            <div class="visually-hidden">
-              <?php echo do_shortcode('[contact-form-7 id="21" title="Form serviços"]'); ?>
+              <div data-step="2" class="d-none">
+                <?php echo do_shortcode('[contact-form-7 id="21" title="Form serviços"]'); ?>
+              </div>
             </div>
 
-            <!-- <form action="">
-              <div class="" id="formContactForm7">
-                <input type="text" id="tipoDePessoaContactForm">
-                <input type="text" id="tipoDeServicoContactForm">
-                <input type="text" id="nomeContactForm">
-                <input type="email" id="emailContactForm">
-                <input type="tel" id="telefoneContactForm">
-                <textarea name="" id="mensagemContactForm"></textarea>
-                <input type="submit" id="submitContactForm">
-              </div>
-            </form> -->
-            <!-- <div id="form-servicos-final" class="d-none">
+            <div id="form-servicos-final" class="d-none">
               <div class="row justify-content-center">
                 <div class="col-6">
                   <div class="border border-2 border-main p-awe-24">
                     <div class="d-flex justify-content-center mb-awe-32">
-                      <img src="/dist/img/svg/form-success.svg">
+                      <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/form-success.svg">
                     </div>
                     <p class="fz-24 text-main fw-bold mb-awe-16 text-center">
                       Sua solicitação foi enviada com <span class="text-secondary">sucesso</span>!
                     </p>
                     <p class="text-main fz-16 text-center">
-                      Em breve um dos nossos especialistas irá retornar a sua solicitação.
-                      Obrigado!
+                      Em breve um dos nossos especialistas irá retornar a sua solicitação. Obrigado!
                     </p>
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -608,9 +521,7 @@
           Contato
         </h2>
         <p class="fz-16 text-darker-1 mb-md-awe-40 mb-lg-awe-96">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada dui mi, non tincidunt
-          est
-          vestibulum sit amet.
+          Você tem alguma dúvida ou gostaria de conversar melhor sobre algum outro assunto? Entre em contato conosco!
         </p>
         <div class="d-flex flex-column gap-awe-32">
           <a href="mailto:contata@revojus.com.br" class="text-decoration-none fw-bold fz-16 text-secondary">

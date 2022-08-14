@@ -29,7 +29,7 @@
   <header class="bg-main-darker-1 position-sticky top-0">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand p-0" href="">
+        <a class="navbar-brand p-0" href="<?php echo home_url(); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/logo.svg" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
