@@ -2,6 +2,8 @@
 
 @import 'components';
 
+@import 'plugins';
+
 p {
   margin: 0;
 }
@@ -70,6 +72,39 @@ section#sobre .img-sobre {
   }
 }
 
+#porque-revojus {
+  background: linear-gradient(
+      90deg,
+      rgba(221, 209, 229, 0.24) 0%,
+      rgba(236, 221, 230, 0.413333) 5.73%,
+      rgba(255, 236, 231, 0.48) 28.13%,
+      rgba(253, 251, 252, 0) 56.25%
+    ),
+    #ffffff;
+
+  .revojus-card {
+    width: 100%;
+    height: max-content;
+    background: #ffffff;
+    box-shadow: 0px 4px 17px rgba(190, 80, 55, 0.16);
+    border-radius: 4px;
+    padding: 16px;
+
+    h5 {
+      text-transform: uppercase;
+      font-size: 16px;
+      color: $secondary;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    p {
+      text-align: center;
+      color: $darker-1;
+    }
+  }
+}
+
 section#chamado-equipe {
   background: linear-gradient(
       321.12deg,
@@ -92,6 +127,18 @@ section#chamado-equipe {
       right: -16px;
     }
   }
+
+  #porque-revojus {
+    background: #ffffff;
+    
+    .revojus-card {
+      height: 200px;
+      background: #ffffff;
+      box-shadow: none;
+      border-radius: 0px;
+      padding: 0px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -109,6 +156,12 @@ section#chamado-equipe {
     .background-image {
       background: url(/dist/img/img-main-sobre.jpg) no-repeat center;
       background-size: cover;
+    }
+  }
+
+  #porque-revojus {
+    .revojus-card {
+      height: 150px;
     }
   }
 }
