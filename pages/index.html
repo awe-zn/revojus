@@ -144,7 +144,7 @@
               <div class="revojus-card">
                 <h5>Quebrando barreiras</h5>
                 <p>
-                  Uma das nossas metas é diminuir a burocracia para resolução de problemas jurídicos, 
+                  Uma das nossas metas é diminuir a burocracia para resolução de problemas jurídicos,
                   unificando o acesso à justiça de forma digital.
                 </p>
               </div>
@@ -153,7 +153,7 @@
               <div class="revojus-card">
                 <h5>24 horas</h5>
                 <p>
-                  Você pode solicitar o acompanhamento de um advogado especialista na área que a sua demanda necessita, 
+                  Você pode solicitar o acompanhamento de um advogado especialista na área que a sua demanda necessita,
                   em qualquer hora do dia e lugar no mundo.
                 </p>
               </div>
@@ -168,19 +168,313 @@
               <div class="revojus-card">
                 <h5>Experiência do usuário</h5>
                 <p>
-                  Pensando em você, a plataforma foi construída e testada várias vezes, 
-                  para garantir a melhor experiência, 
-                  com tranquilidade, 
+                  Pensando em você, a plataforma foi construída e testada várias vezes,
+                  para garantir a melhor experiência,
+                  com tranquilidade,
                   segurança e em poucos minutos.
                 </p>
               </div>
               <div class="revojus-card">
                 <h5>Diversidade de áreas</h5>
                 <p>
-                  Você precisa resolver uma situação da área trabalhista e não conhece nenhum advogado de confiança? 
-                  Aqui temos especialistas em várias áreas do direito, 
+                  Você precisa resolver uma situação da área trabalhista e não conhece nenhum advogado de confiança?
+                  Aqui temos especialistas em várias áreas do direito,
                   sempre dispostos a te ajudar!
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container px-awe-24 px-lg-0" id="form-servicos">
+      <div class="divider"></div>
+      <div class="row justify-content-center py-awe-64 pt-md-awe-80 pb-md-awe-128">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="text-center">
+            <h2 class="text-main fz-24 fz-md-40 fw-bold d-inline-block border-bottom border-4 border-secondary mb-awe-32 mb-md-awe-48">
+              Solicite o seu serviço!
+            </h2>
+          </div>
+          <p class="text-darker-1 fz-14 fz-md-18 text-start text-sm-center">
+            Vamos à sua situação,
+            siga os passos e descreva com detalhes o ocorrido para que possamos te direcionar para o advogado especialista adequado ao seu caso.
+          </p>
+        </div>
+        <div class="col-12 col-md-10 col-lg-7 pt-awe-64 pb-awe-48 pb-lg-awe-64">
+          <div class="form-steps">
+            <div class="form-step">
+              <div data-step="progress" class="form-step__number active">
+                1
+              </div>
+              <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                <span class="d-none d-lg-block text-nowrap">
+                  Tipo de pessoa
+                </span>
+                <span class="d-lg-none">
+                  Pessoa
+                </span>
+              </p>
+            </div>
+
+            <div class="form-steps__divider"></div>
+
+            <div class="form-step">
+              <div data-step="progress" class="form-step__number">
+                2
+              </div>
+              <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                <span class="d-none d-lg-block text-nowrap">
+                  Tipo de serviço
+                </span>
+                <span class="d-lg-none">
+                  Serviço
+                </span>
+              </p>
+            </div>
+
+            <div class="form-steps__divider"></div>
+
+            <div class="form-step">
+              <div data-step="progress" class="form-step__number">
+                3
+              </div>
+              <p class="fw-bold text-secondary fz-14 fz-md-16 m-0">
+                Formulário
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12">
+          <div data-step="step">
+            <p class="text-main fz-16 fz-md-24 fw-bold mb-32 text-center">
+              Selecione o tipo de pessoa que deseja processar
+            </p>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-awe-32 gap-md-awe-64 pt-awe-32 pt-md-awe-40">
+              <div class="custom-form-check">
+                <img src="/dist/img/svg/physical-person.svg" alt="">
+                <label class="text-secondary fz-14 fz-md-16 m-0" for="pessoaFisica">
+                  Pessoa física
+                </label>
+                <p class="text-center fz-14 fz-md-16 text-darker-1 m-0">
+                  Acompanhamento para uma situação que envolve <span class="fw-bold">outra pessoa</span>.
+                </p>
+                <input onclick="etapa1('fisica')" type="radio" name="tipoDePessoa" id="pessoaFisica">
+              </div>
+              <div class="custom-form-check">
+                <img src="/dist/img/svg/company.svg" alt="">
+                <label class="text-secondary fz-14 fz-md-16 m-0" for="pessoaJuridica">
+                  Pessoa jurídica
+                </label>
+                <p class="text-center fz-14 fz-md-16 text-darker-1 m-0">
+                  Acompanhamento para uma situação que envolve <span class="fw-bold">uma empresa</span>.
+                </p>
+                <input onclick="etapa1('juridica')" type="radio" name="tipoDePessoa" id="pessoaJuridica">
+              </div>
+            </div>
+          </div>
+          <div data-step="step" class="d-none">
+            <div data-subStep="fisica" class="row justify-content-center d-none">
+              <div class="mb-awe-32 col-12">
+                <h3 class="text-main fz-16 fz-md-24 text-center">
+                  Você está como pessoa <span class="fw-bold">física. <br> Selecione o serviço que deseja</span>
+                </h3>
+              </div>
+              <div class="servicos-grid-container col-12 col-lg-9 col-xl-10">
+                <div class="awe-grid-3">
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-subStep="juridica" class="row justify-content-center d-none">
+              <div class="mb-awe-32 col-12">
+                <h3 class="text-main fz-16 fz-md-24 text-center">
+                  Você está como pessoa <span class="fw-bold">jurídica. <br> Selecione o serviço que deseja</span>
+                </h3>
+              </div>
+              <div class="servicos-grid-container col-12 col-lg-9 col-xl-10">
+                <div class="awe-grid-3">
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                  <div class="servico-card">
+                    <img src="/dist/img/servicos/saude.svg" alt="">
+                    <label class="text-secondary m-0 text-center">
+                      saúde
+                    </label>
+                    <input type="radio" name="tipoDeServico" value="saude">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-awe-48 d-flex justify-content-center gap-awe-32">
+              <button class="fz-14 fz-md-16 awe-button secondary-button" onclick="etapa0()">
+                Voltar
+              </button>
+              <button class="fz-14 fz-md-16 awe-button primary-button" onclick="etapa2()" data-button="next" disabled>
+                Continuar
+              </button>
+            </div>
+          </div>
+          <div data-step="step" class="row justify-content-center d-none">
+            <div class="col-12 col-lg-10 col-xl-8">
+              <form action="">
+                <p class="fw-bold fz-24 text-main mb-awe-40 d-none d-sm-block">
+                  Informações
+                </p>
+                <div class="row gap-awe-32 gap-md-0 p-0">
+                  <div class="col-12 col-md-6 d-flex flex-column gap-awe-24 gap-md-0 justify-content-between">
+                    <div class="visually-hidden">
+                      <input type="text" id="pessoaContactForm">
+                      <input type="text" id="servicoContactForm">
+                    </div>
+                    <div>
+                      <label for="nome">Nome</label>
+                      <input type="text" name="nome" id="nome" placeholder="Nome">
+                    </div>
+                    <div>
+                      <label for="email">Email</label>
+                      <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div>
+                      <label for="celular">Celular</label>
+                      <input type="tel" name="celular" id="celular" placeholder="Número">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="mensagem">Descreva a situação</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Descreva a situação" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+
+                <div class="pt-awe-32 d-flex justify-content-center gap-awe-32">
+                  <button class="awe-button secondary-button" onclick="etapa1()" data-button="formNav">
+                    Voltar
+                  </button>
+                  <input type="submit" class="awe-button primary-button" value="Enviar">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="form-servicos-final" class="d-none">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 col-lg-6">
+                <div class="border border-2 border-main p-awe-24">
+                  <div class="d-flex justify-content-center mb-awe-32">
+                    <img src="/dist/img/svg/form-success.svg">
+                  </div>
+                  <p class="fz-24 text-main fw-bold mb-awe-16 text-center">
+                    Sua solicitação foi enviada com <span class="text-secondary">sucesso</span>!
+                  </p>
+                  <p class="text-main fz-16 text-center">
+                    Em breve um dos nossos especialistas irá retornar a sua solicitação. Obrigado!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -193,6 +487,7 @@
   <script src="/dist/js/plugins/jquery.min.js"></script>
   <script src="/dist/js/plugins/owl.carousel.min.js"></script>
   <script src="/dist/js/carrossel.js"></script>
+  <script src="/dist/js/index.js"></script>
 </body>
 
 </html>
