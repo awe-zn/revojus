@@ -66,8 +66,7 @@
           Ainda possui dúvidas?
         </h3>
         <p class="text-darker-1 fz-16 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet egestas mauris. Phasellus at
-          risus at turpis porttitor laoreet.
+          Sua dúvida não estava nessa lista? Nossa equipe está pronta para ajudar, preencha o formulário de contato da página inicial detalhando a sua dúvida, e nós entraremos em contato com você!
         </p>
       </div>
 

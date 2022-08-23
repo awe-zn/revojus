@@ -9,10 +9,10 @@
     <nav style="--bs-breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDYgMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01LjY5NTMxIDAuNTc4MTI1TDEuNDQ1MzEgMTJIMC4xNjQwNjJMNC40MjE4OCAwLjU3ODEyNUg1LjY5NTMxWiIgZmlsbD0iIzE4MEUzOCIvPgo8L3N2Zz4K);" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html" class="breadcrumb-link">Home</a>
+          <a href="<?php echo home_url(); ?>" class="breadcrumb-link">Home</a>
         </li>
         <li class="breadcrumb-item text-light-2" aria-current="page">
-          <a href="equipe.html" class="breadcrumb-link">
+          <a href="<?php echo home_url('/equipe'); ?>" class="breadcrumb-link">
             Equipe
           </a>
         </li>
@@ -27,23 +27,30 @@
         </h1>
       </div>
       <div class="col-12 awe-grid-1">
-        <div class="equipe-card">
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/img/sobre-img.jpg" alt="">
-          <div class="p-awe-12 bg-light-2">
-            <p class="fz-16 text-main fw-bold text-center mb-0">
-              Nome Sobrenome
-            </p>
-            <p class="text-darker-2 fz-14 fw-regular text-center mb-0">
-              Ocupação
-            </p>
-          </div>
-        </div>
+        <?php
+        $equipe = get_field_cmb2('membros_da_equipe');
+
+        if (isset($equipe)) {
+          foreach ($equipe as $key => $membro_da_equipe) { ?>
+            <div class="equipe-card">
+              <img src="<?php echo $membro_da_equipe['foto']; ?>" alt="">
+              <div class="p-awe-12 bg-light-2">
+                <p class="fz-16 text-main fw-bold text-center mb-0">
+                  <?php echo $membro_da_equipe['nome']; ?>
+                </p>
+                <p class="text-darker-2 fz-14 fw-regular text-center mb-0">
+                  <?php echo $membro_da_equipe['ocupacao']; ?>
+                </p>
+              </div>
+            </div>
+        <?php }
+        } ?>
       </div>
     </div>
   </div>
   </div>
 </main>
-<section class="bg-light-1">
+<section class="bg-light-1" id="cadastre-se">
   <div class="container-md">
     <div class="divider"></div>
   </div>
@@ -58,33 +65,26 @@
           de investimento inicial. Esse foi um dos motivos da criação da Revojus, ajudar advogados a organizarem
           processos de trabalho, gerenciar clientes e gerar conexão com novos potenciais clientes.
         </p>
-        <form action="" id="" class="d-none">
-          <div id="form-equipe">
-            <div class="border border-2 border-main-lighter-2 rounded-2 py-awe-32 px-awe-16 px-md-awe-40 mb-awe-40 form-equipe__fields">
-              <p class="fw-bold fz-24 text-main mb-awe-40">
-                Informações
-              </p>
-              <div class="d-flex flex-column gap-awe-24">
-                <div>
-                  <label for="">Nome</label>
-                  [text Nome placeholder "Nome"]
+        <div id="form-equipe">
+          <?php echo do_shortcode('[contact-form-7 id="6" title="Formulário de equipe"]'); ?>
+        </div>
+        <div id="form-equipe-success" class="d-none">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="border border-2 border-main p-awe-24">
+                <div class="d-flex justify-content-center mb-awe-32">
+                  <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/form-success.svg">
                 </div>
-                <div>
-                  <label for="">Email</label>
-                  [email email placeholder "email"]
-                </div>
-                <div>
-                  <label for="">Celular</label>
-                  [tel Número placeholder "(99) 9999-9999"]
-                </div>
+                <p class="fz-20 fz-sm-24 text-main fw-bold mb-awe-16 text-center">
+                  Sua solicitação foi enviada com <span class="text-secondary">sucesso</span>!
+                </p>
+                <p class="text-main fz-16 text-center">
+                  Em breve um dos nossos especialistas irá retornar a sua solicitação. Obrigado!
+                </p>
               </div>
             </div>
-            <div class="d-flex justify-content-center">
-              [submit class:awe-button class:primary-button "Enviar"]
-            </div>
           </div>
-        </form>
-        <?php echo do_shortcode('[contact-form-7 id="22" title="Form equipe"]'); ?>
+        </div>
       </div>
     </div>
   </div>
