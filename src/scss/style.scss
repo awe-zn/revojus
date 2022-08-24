@@ -55,7 +55,7 @@ section#sobre .img-sobre {
     display: block;
     height: 34px;
     width: 34px;
-    background: url('/wp-content/themes/revojus/dist/img/svg/img-detail.svg');
+    background: url(/dist/img/svg/img-detail.svg);
     position: absolute;
     top: -11px;
     left: -13px;
@@ -130,7 +130,7 @@ section#chamado-equipe {
 
   #porque-revojus {
     background: #ffffff;
-    
+
     .revojus-card {
       height: 200px;
       background: #ffffff;
@@ -145,7 +145,7 @@ section#chamado-equipe {
   main#hero-index {
     background: linear-gradient(90deg, #e9dce4 50%, #f0f5fe 50%);
     .background-image {
-      background: url(/wp-content/themes/revojus/dist/img/hero-index.jpg) no-repeat;
+      background: url(/dist/img/hero-index.jpg) no-repeat;
       background-size: auto;
       background-position-x: center;
     }
@@ -153,10 +153,6 @@ section#chamado-equipe {
 
   main.main-sobre {
     background: linear-gradient(90deg, #ba352f 50.51%, #5d144c 50.52%);
-    .background-image {
-      background: url(/wp-content/themes/revojus/dist/img/img-main-sobre.jpg) no-repeat center;
-      background-size: cover;
-    }
   }
 
   #porque-revojus {

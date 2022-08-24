@@ -42,9 +42,14 @@ label#labelArquivosdDoFormulario {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   input {
-    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
   }
 }
 
@@ -75,13 +80,13 @@ label#labelArquivosdDoFormulario {
 
     button {
       all: unset;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      width: 21px;
+      height: 21px;
       color: $darker-3;
+      font-size: 21px;
 
       &:hover {
         color: $darker-2;

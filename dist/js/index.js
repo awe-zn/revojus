@@ -1,165 +1,142 @@
-const formContainer = document.querySelector('#form-servicos');
-const formHidden = document.querySelectorAll('.form-hidden');
-const formFinal = document.querySelector('#form-servicos-final');
-const formData = {
-  pessoa: '',
-  servico: '',
-};
+// variáveis do contact form 7
 
 const inputPessoaContactForm = document.querySelector('#pessoaContactForm');
 const inputServicoContactForm = document.querySelector('#servicoContactForm');
 const inputFilesContactForm = document.querySelector('#filesContactForm');
 
-formContainer
-  .querySelector('form')
-  .classList.add('row', 'justify-content-center');
+// variáveis do formulário
 
-// Buttons
+const formContainer = document.querySelector('#form-servicos');
+const formEtapas = document.querySelectorAll('[data-step="step"]');
+const formSubEtapas = document.querySelectorAll('[data-subStep]');
+const formEtapasProgresso = document.querySelectorAll('[data-step="progress"]');
+const nextButton = document.querySelector('[data-button="next"]');
+const servicos = document.querySelectorAll('input[name="tipoDeServico"]');
+const fileList = document.querySelector('#listaDeArquivos');
+const fileInput = document.querySelector('#arquivosDoFormulario');
+const formData = {
+  pessoa: '',
+  servico: '',
+};
+let files = [];
+const modalFeedback = document.querySelector('#form-feedback');
 
-const navButtons = formContainer.querySelectorAll('button');
-
-navButtons.forEach(navButton => {
-  navButton.addEventListener('click', e => {
-    e.preventDefault();
+servicos.forEach(servico => {
+  servico.addEventListener('click', ({ target }) => {
+    nextButton.removeAttribute('disabled');
+    formData.servico = target.value;
   });
 });
 
-const nextButton = formContainer.querySelector('button[data-button="next"]');
+const updateFilesView = () => {
+  fileList.innerHTML = '';
 
-// form step progress
+  files.forEach((file, index) => {
+    const fileItemHtml = `
+        <div class="arquivo__item">
+          <span>
+            ${file.name}
+          </span>
 
-const stepProgress = formContainer.querySelectorAll('[data-step="progress"]');
+          <button onclick="removeFile(${index})">&#215;</button>
+        </div>
+      `;
 
-// Etapas
+    fileList.innerHTML += fileItemHtml;
+  });
 
-const formEtapas = formContainer.querySelectorAll('[data-step="step"]');
+  if (files.length) {
+    fileList.classList.remove('d-none');
+  } else {
+    fileList.classList.add('d-none');
+  }
+};
+
+const removeFile = index => {
+  files.pop(index);
+
+  updateFilesView();
+};
+
+fileInput.addEventListener('change', ({ target }) => {
+  const arrayFiles = Array.from(target.files);
+
+  arrayFiles.forEach(file => {
+    files.push(file);
+  });
+
+  const data = new DataTransfer();
+
+  fileInput.files = data.files;
+
+  updateFilesView();
+});
+
+// etapas
 
 const etapa0 = () => {
   formEtapas[0].classList.remove('d-none');
   formEtapas[1].classList.add('d-none');
-  stepProgress[0].classList.add('active');
-  stepProgress[1].classList.remove('active');
 
-  formSubEtapas.forEach(subEtapa => {
-    subEtapa.classList.add('d-none');
-  });
+  formEtapasProgresso[0].classList.add('active');
+  formEtapasProgresso[1].classList.remove('active');
 
-  servicos.forEach(servico => {
-    servico.checked = false;
-  });
+  formSubEtapas[0].classList.add('d-none');
+  formSubEtapas[1].classList.add('d-none');
 
   nextButton.setAttribute('disabled', 'disabled');
 
   formContainer.scrollIntoView();
 };
 
-// SubEtapas
-
-const formSubEtapas = formContainer.querySelectorAll('[data-subStep]');
-
-// Serviços
-
-const servicos = formContainer.querySelectorAll('input[name="tipoDeServico"]');
-
-servicos.forEach(servico => {
-  servico.addEventListener('click', ({ target }) => {
-    formData.servico = target.value;
-    nextButton.removeAttribute('disabled');
-  });
-});
-
 const etapa1 = pessoa => {
   formEtapas[0].classList.add('d-none');
-  formEtapas[2].classList.add('d-none');
   formEtapas[1].classList.remove('d-none');
+  formEtapas[2].classList.add('d-none');
 
-  stepProgress[0].classList.remove('active');
-  stepProgress[1].classList.add('active');
-  stepProgress[2].classList.remove('active');
+  formEtapasProgresso[0].classList.remove('active');
+  formEtapasProgresso[1].classList.add('active');
+  formEtapasProgresso[2].classList.remove('active');
 
   if (pessoa) {
     formData.pessoa = pessoa;
   }
 
-  formSubEtapas.forEach(subEtapa => {
-    if (subEtapa.dataset.substep === pessoa) {
-      subEtapa.classList.remove('d-none');
-    }
-  });
-
-  servicos.forEach(servico => {
-    servico.checked = false;
-  });
-
-  nextButton.setAttribute('disabled', 'disabled');
+  if (pessoa === 'fisica') {
+    formSubEtapas[0].classList.remove('d-none');
+  } else if (pessoa === 'juridica') {
+    formSubEtapas[1].classList.remove('d-none');
+  }
 
   formContainer.scrollIntoView();
 };
 
-const formFiles = document.querySelector('#arquivosDoFormulario');
-const formFilesContainer = document.querySelector('#listaDeArquivos');
-let arrayFiles = [];
-
-formFiles.addEventListener('change', e => {
-  formFilesContainer.classList.remove('d-none');
-  arrayFiles = Array.from(e.target.files);
-
-  arrayFiles.forEach(file => {
-    const fileItemHTML = `
-      <div class="arquivo__item">
-        ${file.name}
-      </div>      
-    `;
-
-    formFilesContainer.innerHTML += fileItemHTML;
-  });
-
-  if (!arrayFiles) {
-    formFilesContainer.classList.add('d-none');
-  }
-});
-
 const etapa2 = () => {
   formEtapas[1].classList.add('d-none');
-  formEtapas[3].classList.add('d-none');
   formEtapas[2].classList.remove('d-none');
+  formEtapas[3].classList.add('d-none');
 
-  stepProgress[1].classList.remove('active');
-  stepProgress[2].classList.add('active');
-  stepProgress[3].classList.remove('active');
-
-  if (arrayFiles) {
-    arrayFiles.forEach(file => {
-      const fileItemHTML = `
-        <div class="arquivo__item">
-          ${file.name}
-        </div>      
-      `;
-    });
-  }
+  formEtapasProgresso[1].classList.remove('active');
+  formEtapasProgresso[2].classList.add('active');
+  formEtapasProgresso[3].classList.remove('active');
 };
 
 const etapa3 = () => {
   formEtapas[2].classList.add('d-none');
   formEtapas[3].classList.remove('d-none');
 
-  stepProgress[2].classList.remove('active');
-  stepProgress[3].classList.add('active');
+  formEtapasProgresso[2].classList.remove('active');
+  formEtapasProgresso[3].classList.add('active');
 
   inputPessoaContactForm.value = formData.pessoa;
   inputServicoContactForm.value = formData.servico;
-  inputFilesContactForm.files = formFiles.files;
 
-  formContainer.scrollIntoView();
+  const filesContactForm = new DataTransfer();
+
+  files.forEach(file => {
+    filesContactForm.items.add(file);
+  });
+
+  inputFilesContactForm.files = filesContactForm.files;
 };
 
-document.addEventListener(
-  'wpcf7mailsent',
-  function (event) {
-    formHidden.forEach(item => {
-      item.classList.add('d-none');
-    });
-    formFinal.classList.remove('d-none');
-  },
-  false
-);

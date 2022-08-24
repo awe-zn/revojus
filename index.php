@@ -1,5 +1,24 @@
 <?php get_header(); ?>
 
+<style>
+  section#sobre .img-sobre::before {
+    background: url('<?php echo get_template_directory_uri(); ?>/dist/img/svg/img-detail.svg');
+  }
+
+  @media (min-width: 992px) {
+    main#hero-index .background-image {
+      background: url(<?php echo get_template_directory_uri(); ?>/dist/img/hero-index.jpg) no-repeat;
+      background-size: auto;
+      background-position-x: center;
+    }
+
+    main.main-sobre .background-image {
+      background: url(<?php echo get_template_directory_uri(); ?>/dist/img/img-main-sobre.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+</style>
+
 <main id="hero-index">
   <div class="background-image">
     <div class="container pt-awe-40 pt-xxl-awe-80 pb-awe-80 pb-xxl-awe-128">
@@ -128,133 +147,7 @@
   </div>
 </section>
 
-<?php
-$servicos_pessoa_fisica = [
-  [
-    'nome' => 'Aéreo',
-    'img' => 'aereo.svg',
-  ],
-  [
-    'nome' => 'Jogos',
-    'img' => 'jogos.svg',
-  ],
-  [
-    'nome' => 'Redes Sociais',
-    'img' => 'redes-sociais.svg',
-  ],
-  [
-    'nome' => 'Entregas',
-    'img' => 'entregas.svg',
-  ],
-  [
-    'nome' => 'Delivery',
-    'img' => 'delivery.svg',
-  ],
-  [
-    'nome' => 'Rodoviário',
-    'img' => 'rodoviario.svg',
-  ],
-  [
-    'nome' => 'Saúde',
-    'img' => 'saude.svg',
-  ],
-  [
-    'nome' => 'Financeiro',
-    'img' => 'financeiro.svg',
-  ],
-  [
-    'nome' => 'Hospedagem',
-    'img' => 'hospedagem.svg',
-  ],
-  [
-    'nome' => 'Imobiliário',
-    'img' => 'imobiliario.svg',
-  ],
-  [
-    'nome' => 'Elétrico',
-    'img' => 'eletrico.svg',
-  ],
-  [
-    'nome' => 'Trânsito',
-    'img' => 'transito.svg',
-  ],
-  [
-    'nome' => 'Telefonia',
-    'img' => 'telefonia.svg',
-  ],
-  [
-    'nome' => 'Educação',
-    'img' => 'educacao.svg',
-  ],
-  [
-    'nome' => 'Trabalhista',
-    'img' => 'trabalhista.svg',
-  ],
-  [
-    'nome' => 'Crimes Cibernéticos',
-    'img' => 'crimes-ciberneticos.svg',
-  ],
-  [
-    'nome' => 'Previdenciário',
-    'img' => 'previdenciario.svg',
-  ],
-  [
-    'nome' => 'Família e Sucessões',
-    'img' => 'familia-e-sucessoes.svg',
-  ],
-  [
-    'nome' => 'Penal',
-    'img' => 'penal.svg',
-  ],
-  [
-    'nome' => 'Desportivo',
-    'img' => 'desportivo.svg',
-  ],
-];
-
-$servicos_pessoa_juridica = [
-  [
-    'nome' => 'Tributário',
-    'img' => 'tributario.svg',
-  ],
-  [
-    'nome' => 'Recuperação de crédito',
-    'img' => 'recuperacao-de-credito.svg',
-  ],
-  [
-    'nome' => 'Empresarial',
-    'img' => 'empresarial.svg',
-  ],
-  [
-    'nome' => 'Agronegócio',
-    'img' => 'agronegocio.svg',
-  ],
-  [
-    'nome' => 'Ambiental',
-    'img' => 'ambiental.svg',
-  ],
-  [
-    'nome' => 'Desportivo',
-    'img' => 'desportivo.svg',
-  ],
-  [
-    'nome' => 'Licitação e contrato',
-    'img' => 'licitacao-e-contrato.svg',
-  ],
-  [
-    'nome' => 'LGPD',
-    'img' => 'lgpd.svg',
-  ],
-  [
-    'nome' => 'Marcas e patentes',
-    'img' => 'marcas-e-patentes.svg',
-  ],
-  [
-    'nome' => 'Direito internacional',
-    'img' => 'direito-internacional.svg',
-  ],
-];
-?>
+<?php include(TEMPLATEPATH . "/inc/servicos.php"); ?>
 
 <section id="servicos">
   <div class="container px-awe-24 px-lg-0" id="form-servicos">
@@ -271,7 +164,8 @@ $servicos_pessoa_juridica = [
           siga os passos e descreva com detalhes o ocorrido para que possamos te direcionar para o advogado especialista adequado ao seu caso.
         </p>
       </div>
-      <div class="col-12 col-md-10 col-lg-8 pt-awe-64 pb-awe-48 pb-lg-awe-64 form-hidden form-steps-container">
+      <!-- barra de progresso do formulário -->
+      <div class="col-12 col-md-10 col-lg-8 pt-awe-64 pb-awe-32 pb-lg-awe-64 form-hidden form-steps-container">
         <div class="form-steps">
           <div class="form-step">
             <div data-step="progress" class="form-step__number active">
@@ -327,7 +221,10 @@ $servicos_pessoa_juridica = [
 
         </div>
       </div>
-      <div class="col-12 form-hidden">
+      <!-- /barra de progresso do formulário -->
+
+      <!-- Etapas do formulário -->
+      <div class="col-12 mt-awe-16 mt-lg-0 form-hidden">
         <div data-step="step">
           <p class="text-main fz-16 fz-md-24 fw-bold mb-32 text-center">
             Selecione o tipo de pessoa que deseja processar
@@ -424,19 +321,15 @@ $servicos_pessoa_juridica = [
             </div>
             <div class="d-flex flex-column-reverse flex-md-row gap-awe-16">
               <div id="listaDeArquivos" class="d-none"></div>
-              <!-- input "falso" customizado -->
               <label for="arquivosDoFormulario" id="labelArquivosdDoFormulario">
                 <div class="fz-16 text-darker-2 text-center">
-                  <!-- <p class="fw-regular">Arraste os arquivos até aqui</p>
-                  <span class="fw-regular">ou</span> -->
+                  <p class="fw-regular">Arraste os arquivos até aqui</p>
+                  <span class="fw-regular">ou</span>
                   <p class="fw-bold">Selecione os arquivos</p>
                 </div>
+                <input type="file" name="arquivosDoFormulario" id="arquivosDoFormulario" multiple>
               </label>
             </div>
-          </div>
-          <!-- input real escondido -->
-          <div class="d-none">
-            <input type="file" name="arquivosDoFormulario" id="arquivosDoFormulario" multiple>
           </div>
           <div class="pt-awe-48 d-flex justify-content-center gap-awe-32">
             <button class="fz-14 fz-md-16 awe-button secondary-button" onclick="etapa1()">
@@ -453,10 +346,17 @@ $servicos_pessoa_juridica = [
           </div>
         </div>
       </div>
-      <div id="form-servicos-final" class="d-none pt-awe-64">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6">
-            <div class="border border-2 border-main p-awe-24">
+      <!-- /Etapas do formulário -->
+
+      <!-- Feedback de envio do formulário -->
+      <div class="modal fade form-feedback" id="form-servicos-feedback" tabindex="-1" aria-labelledby="formFeedback" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon.svg" class="d-none d-md-block" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon-sm.svg" class="d-md-none" alt="">
+            </button>
+            <div>
               <div class="d-flex justify-content-center mb-awe-32">
                 <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/form-success.svg">
               </div>
@@ -470,6 +370,7 @@ $servicos_pessoa_juridica = [
           </div>
         </div>
       </div>
+      <!-- /Feedback de envio do formulário -->
     </div>
   </div>
 </section>
@@ -477,10 +378,10 @@ $servicos_pessoa_juridica = [
 <section id="chamado-equipe">
   <div class="container px-awe-32 px-lg-0 pt-lg-awe-32">
     <div class="row">
-      <div class="col-5 d-none d-lg-flex align-items-end">
+      <div class="col-12 col-lg-5 d-flex align-items-end justify-content-center order-1 order-lg-0">
         <img src="<?php echo get_template_directory_uri(); ?>/dist/img/equipe.png" class="img-fluid" alt="">
       </div>
-      <div class="col-12 col-md-8 col-lg-7 col-xl-5 mb-awe-64">
+      <div class="col-12 col-lg-7 col-xl-5 mb-awe-64">
         <h3 class="text-light-4 fw-bold fz-32 mt-awe-40 mb-awe-24">
           Interessado em ser da equipe?
         </h3>
@@ -489,7 +390,7 @@ $servicos_pessoa_juridica = [
           clientes e a
           possibilidade de atender pessoas de todo o país, a Revojus é para você!
         </p>
-        <a href="<?php echo home_url('/equipe'); ?>" class="awe-button primary-button">
+        <a href="<?php echo home_url('/equipe/#cadastre-se'); ?>" class="awe-button primary-button">
           Cadastre-se!
         </a>
       </div>
@@ -504,7 +405,7 @@ $servicos_pessoa_juridica = [
         <h2 class="text-main fw-bold border-bottom border-4 border-secondary pb-1 d-inline-block mb-awe-40">
           Contato
         </h2>
-        <p class="fz-16 text-darker-1 mb-md-awe-40 mb-lg-awe-96">
+        <p class="fz-16 text-darker-1 mb-awe-48 mb-lg-awe-96">
           Você tem alguma dúvida ou gostaria de conversar melhor sobre algum outro assunto? Entre em contato conosco!
         </p>
         <div class="d-flex flex-column gap-awe-32">
@@ -525,7 +426,31 @@ $servicos_pessoa_juridica = [
       <div class="col-12 col-lg-6 col-xl-5 offset-lg-1">
         <?php echo do_shortcode('[contact-form-7 id="21" title="Formulário de contato"]'); ?>
       </div>
+      <!-- Feedback de envio do formulário -->
+      <div class="modal fade form-feedback" id="form-contato-feedback" tabindex="-1" aria-labelledby="formFeedback" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon.svg" class="d-none d-md-block" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon-sm.svg" class="d-md-none" alt="">
+            </button>
+            <div>
+              <div class="d-flex justify-content-center mb-awe-32">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/form-success.svg">
+              </div>
+              <p class="fz-24 text-main fw-bold mb-awe-16 text-center">
+                Enviado com <span class="text-secondary">sucesso</span>!
+              </p>
+              <p class="text-main fz-16 text-center">
+                Em breve um dos nossos especialistas irá retornar a sua mensagem. Obrigado!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Feedback de envio do formulário -->
     </div>
   </div>
 </section>
+
 <?php get_footer(); ?>

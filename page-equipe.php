@@ -33,12 +33,14 @@
         if (isset($equipe)) {
           foreach ($equipe as $key => $membro_da_equipe) { ?>
             <div class="equipe-card">
-              <img src="<?php echo $membro_da_equipe['foto']; ?>" alt="">
-              <div class="p-awe-12 bg-light-2">
-                <p class="fz-16 text-main fw-bold text-center mb-0">
+              <div class="equipe-card__img">
+                <img src="<?php echo $membro_da_equipe['foto']; ?>" alt="">
+              </div>
+              <div class="equipe-card__dados p-awe-8 p-lg-awe-16 bg-light-2">
+                <p class="fz-16 fz-md-18 text-main fw-bold text-center mb-0">
                   <?php echo $membro_da_equipe['nome']; ?>
                 </p>
-                <p class="text-darker-2 fz-14 fw-regular text-center mb-0">
+                <p class="text-darker-2 fz-14 fz-md-16 fw-regular text-center mb-0">
                   <?php echo $membro_da_equipe['ocupacao']; ?>
                 </p>
               </div>
@@ -68,23 +70,29 @@
         <div id="form-equipe">
           <?php echo do_shortcode('[contact-form-7 id="6" title="Formulário de equipe"]'); ?>
         </div>
-        <div id="form-equipe-success" class="d-none">
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <div class="border border-2 border-main p-awe-24">
+        <!-- Feedback de envio do formulário -->
+        <div class="modal fade form-feedback" id="form-equipe-feedback" tabindex="-1" aria-labelledby="formFeedback" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon.svg" class="d-none d-md-block" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon-sm.svg" class="d-md-none" alt="">
+              </button>
+              <div>
                 <div class="d-flex justify-content-center mb-awe-32">
                   <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/form-success.svg">
                 </div>
-                <p class="fz-20 fz-sm-24 text-main fw-bold mb-awe-16 text-center">
-                  Sua solicitação foi enviada com <span class="text-secondary">sucesso</span>!
+                <p class="fz-24 text-main fw-bold mb-awe-16 text-center">
+                  Enviado com <span class="text-secondary">sucesso</span>!
                 </p>
                 <p class="text-main fz-16 text-center">
-                  Em breve um dos nossos especialistas irá retornar a sua solicitação. Obrigado!
+                  Seu cadastro agora passará pela nossa diretoria e em breve entraremos em contato com você. Obrigado!
                 </p>
               </div>
             </div>
           </div>
         </div>
+        <!-- /Feedback de envio do formulário -->
       </div>
     </div>
   </div>

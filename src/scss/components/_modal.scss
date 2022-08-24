@@ -1,0 +1,47 @@
+.form-feedback {
+  .modal-dialog {
+    width: 730px;
+    .modal-content {
+      background-color: #ffffff;
+      padding: 24px;
+    }
+  }
+  .close {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    top: -26px;
+    right: -26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $main;
+    background-color: $light-3;
+    width: 49px;
+    height: 49px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .form-feedback {
+    .modal-dialog {
+      width: 90%;
+      margin: 0 auto;
+
+      .modal-content {
+        width: 320px !important;
+        margin: 0 auto;
+        border-radius: 8px;
+        position: relative;
+      }
+    }
+    .close {
+      top: -20px;
+      right: -20px;
+      width: 34px;
+      height: 34px;
+    }
+  }
+}

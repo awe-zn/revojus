@@ -13,11 +13,9 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/plugins/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/plugins/owl.carousel.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/dist/js/carrossel.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/dist/js/index.js"></script>
 
 <?php wp_footer(); ?>
 </body>

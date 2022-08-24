@@ -5,28 +5,3 @@ Description: Tema desenvolvido pela AWE
 */
 
 @import 'dist/css/style.css';
-
-header .header-menu li {
-  border-bottom: 1px solid transparent;
-  padding: 8px 8px;
-}
-
-header .header-menu li:hover {
-  border-bottom: 1px solid #be5037;
-}
-
-header .header-menu li a {
-  color: #ffffff;
-}
-
-header .header-menu li a:hover {
-  color: rgba(#ffffff, 80%);
-}
-
-br {
-  display: none;
-}
-
-#form-contato p {
-  margin: 0;
-}

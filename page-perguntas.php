@@ -9,10 +9,10 @@
     <nav style="--bs-breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDYgMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01LjY5NTMxIDAuNTc4MTI1TDEuNDQ1MzEgMTJIMC4xNjQwNjJMNC40MjE4OCAwLjU3ODEyNUg1LjY5NTMxWiIgZmlsbD0iIzE4MEUzOCIvPgo8L3N2Zz4K);" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="" class="breadcrumb-link">Home</a>
+          <a href="<?php echo home_url(); ?>" class="breadcrumb-link">Home</a>
         </li>
         <li class="breadcrumb-item text-light-2" aria-current="page">
-          <a href="" class="breadcrumb-link">
+          <a href="<?php echo home_url('/perguntas-frequentes'); ?>" class="breadcrumb-link">
             Perguntas frequentes
           </a>
         </li>

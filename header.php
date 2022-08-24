@@ -10,7 +10,7 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" /> -->
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid container-lg px-awe-24 px-lg-0 d-flex flex-row-reverse flex-lg-row">
         <div class="flex-fill w-25 d-flex justify-content-center justify-content-lg-start">
-          <a class="navbar-brand py-0 pe-awe-24 pe-lg-0" href="index.html">
+          <a class="navbar-brand py-0 pe-awe-24 pe-lg-0" href="<?php echo home_url(); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/logo.svg" class="img-fluid" alt="" />
           </a>
         </div>
