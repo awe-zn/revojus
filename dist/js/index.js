@@ -25,6 +25,10 @@ servicos.forEach(servico => {
   servico.addEventListener('click', ({ target }) => {
     nextButton.removeAttribute('disabled');
     formData.servico = target.value;
+    window.scroll(
+      0,
+      window.scrollY + nextButton.getBoundingClientRect().top - 500
+    );
   });
 });
 
@@ -75,28 +79,58 @@ fileInput.addEventListener('change', ({ target }) => {
 // etapas
 
 const etapa0 = () => {
-  formEtapas[0].classList.remove('d-none');
-  formEtapas[1].classList.add('d-none');
+  const inputsTipoDePessoa = document.querySelectorAll(
+    'input[name="tipoDePessoa"]'
+  );
 
-  formEtapasProgresso[0].classList.add('active');
-  formEtapasProgresso[1].classList.remove('active');
+  inputsTipoDePessoa.forEach(item => {
+    item.checked = false;
+  });
+
+  formEtapas.forEach((etapa, index) => {
+    index !== 0
+      ? etapa.classList.add('d-none')
+      : etapa.classList.remove('d-none');
+  });
+
+  formEtapasProgresso.forEach((etapaProgresso, index) => {
+    index !== 0
+      ? etapaProgresso.classList.remove('active')
+      : etapaProgresso.classList.add('active');
+
+      index < 0
+      ? etapaProgresso.classList.add('done')
+      : etapaProgresso.classList.remove('done');
+  });
 
   formSubEtapas[0].classList.add('d-none');
   formSubEtapas[1].classList.add('d-none');
 
   nextButton.setAttribute('disabled', 'disabled');
 
+  servicos.forEach(servico => {
+    servico.checked = false;
+  });
+
   formContainer.scrollIntoView();
 };
 
 const etapa1 = pessoa => {
-  formEtapas[0].classList.add('d-none');
-  formEtapas[1].classList.remove('d-none');
-  formEtapas[2].classList.add('d-none');
+  formEtapas.forEach((etapa, index) => {
+    index !== 1
+      ? etapa.classList.add('d-none')
+      : etapa.classList.remove('d-none');
+  });
 
-  formEtapasProgresso[0].classList.remove('active');
-  formEtapasProgresso[1].classList.add('active');
-  formEtapasProgresso[2].classList.remove('active');
+  formEtapasProgresso.forEach((etapaProgresso, index) => {
+    index !== 1
+      ? etapaProgresso.classList.remove('active')
+      : etapaProgresso.classList.add('active');
+
+    index < 1
+      ? etapaProgresso.classList.add('done')
+      : etapaProgresso.classList.remove('done');
+  });
 
   if (pessoa) {
     formData.pessoa = pessoa;
@@ -112,21 +146,41 @@ const etapa1 = pessoa => {
 };
 
 const etapa2 = () => {
-  formEtapas[1].classList.add('d-none');
-  formEtapas[2].classList.remove('d-none');
-  formEtapas[3].classList.add('d-none');
+  formEtapas.forEach((etapa, index) => {
+    index !== 2
+      ? etapa.classList.add('d-none')
+      : etapa.classList.remove('d-none');
+  });
 
-  formEtapasProgresso[1].classList.remove('active');
-  formEtapasProgresso[2].classList.add('active');
-  formEtapasProgresso[3].classList.remove('active');
+  formEtapasProgresso.forEach((etapaProgresso, index) => {
+    index !== 2
+      ? etapaProgresso.classList.remove('active')
+      : etapaProgresso.classList.add('active');
+
+    index < 2
+      ? etapaProgresso.classList.add('done')
+      : etapaProgresso.classList.remove('done');
+  });
+
+  formContainer.scrollIntoView();
 };
 
 const etapa3 = () => {
-  formEtapas[2].classList.add('d-none');
-  formEtapas[3].classList.remove('d-none');
+  formEtapas.forEach((etapa, index) => {
+    index !== 3
+      ? etapa.classList.add('d-none')
+      : etapa.classList.remove('d-none');
+  });
 
-  formEtapasProgresso[2].classList.remove('active');
-  formEtapasProgresso[3].classList.add('active');
+  formEtapasProgresso.forEach((etapaProgresso, index) => {
+    index !== 3
+      ? etapaProgresso.classList.remove('active')
+      : etapaProgresso.classList.add('active');
+
+    index < 3
+      ? etapaProgresso.classList.add('done')
+      : etapaProgresso.classList.remove('done');
+  });
 
   inputPessoaContactForm.value = formData.pessoa;
   inputServicoContactForm.value = formData.servico;
@@ -140,3 +194,26 @@ const etapa3 = () => {
   inputFilesContactForm.files = filesContactForm.files;
 };
 
+function etapa0Progress() {
+  if (formEtapasProgresso[0].classList.contains('done')) {
+    etapa0();
+  }
+}
+
+function etapa1Progress() {
+  if (formEtapasProgresso[1].classList.contains('done')) {
+    etapa1(formData.pessoa);
+  }
+}
+
+function etapa2Progress() {
+  if(formEtapasProgresso[2].classList.contains('done')) {
+    etapa2();
+  }
+}
+
+function etapa3Progress() {
+  if(formEtapasProgresso[3].classList.contains('done')) {
+    etapa3();
+  }
+}

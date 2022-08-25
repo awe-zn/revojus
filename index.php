@@ -167,7 +167,7 @@
       <!-- barra de progresso do formulário -->
       <div class="col-12 col-md-10 col-lg-8 pt-awe-64 pb-awe-32 pb-lg-awe-64 form-hidden form-steps-container">
         <div class="form-steps">
-          <div class="form-step">
+          <div class="form-step" onclick="etapa0Progress()">
             <div data-step="progress" class="form-step__number active">
               1
             </div>
@@ -183,7 +183,7 @@
 
           <div class="form-steps__divider"></div>
 
-          <div class="form-step">
+          <div class="form-step" onclick="etapa1Progress()">
             <div data-step="progress" class="form-step__number">
               2
             </div>
@@ -199,7 +199,7 @@
 
           <div class="form-steps__divider"></div>
 
-          <div class="form-step">
+          <div class="form-step" onclick="etapa2Progress()">
             <div data-step="progress" class="form-step__number">
               3
             </div>
@@ -210,7 +210,7 @@
 
           <div class="form-steps__divider"></div>
 
-          <div class="form-step">
+          <div class="form-step" onclick="etapa3Progress()">
             <div data-step="progress" class="form-step__number">
               4
             </div>
