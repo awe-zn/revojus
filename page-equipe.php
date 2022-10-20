@@ -62,14 +62,12 @@
         <h3 class="fz-24 fz-md-32 fw-bold text-main border-bottom border-secondary border-4 pb-2 d-inline-block mb-awe-40">
           Deseja entrar na equipe?
         </h3>
-        <p class="fz-18 text-darker-1 text-center mb-awe-64">
-          Entendemos que iniciar a carreira no direito pode ser complicado e ter algumas barreiras, como o alto valor
-          de investimento inicial. Esse foi um dos motivos da criação da Revojus, ajudar advogados a organizarem
-          processos de trabalho, gerenciar clientes e gerar conexão com novos potenciais clientes.
+        <p class="fz-18 text-darker-1 text-center mb-awe-40">
+          Entendemos que iniciar a carreira no direito pode ser complicado e ter algumas barreiras, como o alto valor de investimento inicial. Esse foi um dos motivos da criação da Revojus, ajudar advogados a organizarem processos de trabalho, gerenciar clientes e gerar conexão com novos potenciais clientes.
         </p>
-        <div id="form-equipe">
-          <?php echo do_shortcode('[contact-form-7 id="6" title="Formulário de equipe"]'); ?>
-        </div>
+        <a href="<?php echo home_url('/captura'); ?>" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
+          Conhecer mais da Revojus
+        </a>
         <!-- Feedback de envio do formulário -->
         <div class="modal fade form-feedback" id="form-equipe-feedback" tabindex="-1" aria-labelledby="formFeedback" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg">
