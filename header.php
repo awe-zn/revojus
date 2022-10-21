@@ -52,6 +52,10 @@
             </li>
             <hr class="d-lg-none" style="background: rgba(249, 250, 252, 0.24);">
             <li class="nav-item">
+              <a class="nav-link" href="<?php echo home_url('/planos'); ?>">Planos</a>
+            </li>
+            <hr class="d-lg-none" style="background: rgba(249, 250, 252, 0.24);">
+            <li class="nav-item">
               <a class="nav-link" href="<?php echo home_url('/perguntas-frequentes'); ?>">Perguntas frequentes</a>
             </li>
             <hr class="d-lg-none" style="background: rgba(249, 250, 252, 0.24);">

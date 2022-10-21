@@ -23,7 +23,7 @@
           Durante muito tempo, os grandes escritórios físicos da sua cidade atendiam a maior parte das demandas jurídicas. Mas em 2022, na era digital, uma nova geração de advogados está ansiosa para mudar esse cenário. <strong>Chegou a sua vez de ter mais clientes e um escritório só seu.</strong>
         </p>
 
-        <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2 mb-awe-48">
+        <a href="#captura" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2 mb-awe-48">
           Quero ter meu escritório digital
         </a>
       </div>
@@ -69,7 +69,7 @@
         <h2 class="text-secondary fz-21 fz-md-32 fw-bold text-center mb-awe-40">
           Cadastre-se agora e tenha acesso a um material exclusivo sobre como faremos isso.
         </h2>
-        <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
+        <a href="#captura" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
           Quero participar
         </a>
       </div>
@@ -102,7 +102,7 @@
         </p>
       </div>
       <div class="col-12 d-flex justify-content-center">
-        <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
+        <a href="#captura" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
           Quero participar
         </a>
       </div>
@@ -110,7 +110,7 @@
   </div>
 </section>
 
-<section>
+<section id="captura">
   <div class="container px-awe-24 px-lg-0 py-awe-80 py-md-awe-128">
     <div class="d-flex justify-content-center">
       <h4 class="text-main fw-bold fz-21 fz-md-32 fz-lg-40 d-inline-block border-bottom border-secondary border-4 pb-awe-8 mb-awe-40 mb-md-awe-80">

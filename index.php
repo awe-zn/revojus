@@ -390,7 +390,7 @@
           clientes e a
           possibilidade de atender pessoas de todo o país, a Revojus é para você!
         </p>
-        <a href="<?php echo home_url('/equipe/#cadastre-se'); ?>" class="awe-button primary-button">
+        <a href="<?php echo home_url('/captura/#captura'); ?>" class="awe-button primary-button">
           Cadastre-se!
         </a>
       </div>

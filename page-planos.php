@@ -18,7 +18,7 @@
             A Revojus nasceu para transformar a forma como você trabalha e com essa transformação esperamos que seus resultados na advocacia sejam impulsionados.
           </p>
 
-          <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
+          <a href="#planos" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
             Quero fazer parte da Revojus
           </a>
         </div>
@@ -74,7 +74,7 @@
         <div class="row">
           <div class="col-12 col-lg-4"></div>
           <div class="col-12 col-lg-8">
-            <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
+            <a href="#planos" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
               Quero fazer parte da Revojus
             </a>
           </div>
@@ -111,7 +111,7 @@
         </ul>
       </div>
       <div class="col-12 d-flex justify-content-center">
-        <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
+        <a href="#planos" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
           Quero fazer parte da Revojus
         </a>
       </div>
