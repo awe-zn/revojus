@@ -66,7 +66,7 @@
           Ainda possui dúvidas?
         </h3>
         <p class="text-darker-1 fz-16 text-center">
-          Sua dúvida não estava nessa lista? Nossa equipe está pronta para ajudar, preencha o formulário de contato da página inicial detalhando a sua dúvida, e nós entraremos em contato com você!
+          <?php the_field('ainda_possui_duvidas'); ?>
         </p>
       </div>
 

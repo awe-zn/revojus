@@ -128,3 +128,40 @@ function cmb2_fields_equipe()
 }
 
 add_action('cmb2_admin_init', 'cmb2_fields_equipe');
+
+
+// custom post type
+
+function custom_post_type_planos()
+{
+    register_post_type('planos', array(
+        'label' => 'Planos',
+        'description' => 'Planos de serviço para os advogados interessados na revojus',
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'capability_type' => 'post',
+        'map_meta_cap' => true,
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'planos', 'with_front' => true),
+        'query_var' => true,
+        'supports' => array('title', 'editor', 'page-attributes', 'post-formats'),
+
+        'labels' => array(
+            'name' => 'Planos',
+            'singular_name' => 'Plano',
+            'menu_name' => 'Planos',
+            'add_new' => 'Adicionar novo',
+            'add_new_item' => 'Adicionar novo plano',
+            'edit' => 'Editar',
+            'edit_item' => 'Editar plano',
+            'new_item' => 'Novo plano',
+            'view' => 'Ver planos',
+            'view_item' => 'Ver plano',
+            'search_items' => 'Procurar planos',
+            'not_found' => 'Nenhum Plano Encontrado',
+            'not_found_in_trash' => 'Nenhum Plano Encontrado no Lixo',
+        )
+    ));
+}
+add_action('init', 'custom_post_type_planos');

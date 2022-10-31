@@ -63,7 +63,7 @@
           Deseja entrar na equipe?
         </h3>
         <p class="fz-18 text-darker-1 text-center mb-awe-40">
-          Entendemos que iniciar a carreira no direito pode ser complicado e ter algumas barreiras, como o alto valor de investimento inicial. Esse foi um dos motivos da criação da Revojus, ajudar advogados a organizarem processos de trabalho, gerenciar clientes e gerar conexão com novos potenciais clientes.
+          <?php the_field('chamada_para_a_equipe'); ?>
         </p>
         <a href="<?php echo home_url('/captura'); ?>" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
           Conhecer mais da Revojus

@@ -152,68 +152,73 @@
         </p>
       </div>
 
-      <div class="col-12 col-lg-10">
+      <div class="col-12">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-5 justify-content-center">
-          <div class="col d-flex flex-column align-items-center">
-            <div class="card-plano mb-awe-40">
-              <span class="card-plano__tipo">
-                Mensal
-              </span>
-
-              <div class="card-plano__valor">
-                <span>
-                  <span class="fw-regular">R$</span>
-                  <span class="fw-bold">219</span>
-                </span>
-              </div>
-            </div>
-            <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
-              Selecionar
-            </a>
-          </div>
-          <div class="col d-flex flex-column align-items-center">
-            <div class="card-plano mb-awe-40">
-              <span class="card-plano__tipo">
-                Trimestral
-              </span>
-
-              <div class="card-plano__valor">
-                <span>
-                  <span class="fw-regular">R$</span>
-                  <span class="fw-bold">264</span>
-                </span>
-
-                <div class="text-darker-1 fw-medium fz-21">
-                  ou 3x de R$88,00
+          <?php
+          $args = array(
+            'post_type' => 'planos',
+            'posts_per_page' => '3',
+          );
+          $the_query = new WP_Query($args);
+          ?>
+          <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+              <div class="col d-flex justify-content-center">
+                <div class="d-flex flex-column gap-awe-40 card-plano p-awe-24 p-md-awe-32 p-40">
+                  <h5 class="text-black fz-32 fw-bold">
+                    <?php the_title(); ?>
+                  </h5>
+                  <p class="text-black fz-18 lh-120 mb-0">
+                    <?php the_field('descricao_do_plano', get_the_id()); ?>
+                  </p>
+                  <?php
+                  if (!get_field('gratuito', get_the_id())) { ?>
+                    <div>
+                      <div class="d-flex justify-content-between">
+                        <span class="text-decoration-line-through fz-18 text-black">
+                          R$
+                          <?php the_field('valor_total_do_plano', get_the_id()); ?>
+                        </span>
+                        <span class="text-white bg-secondary d-inline-block py-1 px-2 fw-bold fz-16">
+                          <?php the_field('porcentagem_do_desconto', get_the_id()); ?>% OFF
+                        </span>
+                      </div>
+                      <p class="mb-0 fw-bold fz-24 ff-open-sans">R$
+                        <?php the_field('valor_com_o_desconto', get_the_id()); ?>
+                      </p>
+                      <p class="mb-0 text-black fw-light fz-18">
+                        ou parcelado em até
+                      </p>
+                      <p class="mb-0 mt-awe-24">
+                        <span class="fw-light text-black fz-18">
+                          <?php the_field('numero_de_parcelas', get_the_id()); ?>x
+                        </span>
+                        <span class="fw-bold text-secondary fz-32">
+                          R$
+                          <?php the_field('valor_das_parcelas', get_the_id()); ?>
+                        </span>
+                      </p>
+                    </div>
+                  <?php }
+                  ?>
+                  <a href="<?php the_field('link_para_o_plano', get_the_id()) ?>" class="btn bg-secondary rounded-1 text-white fw-bold fz-18 py-awe-12 d-block">
+                    Começar agora
+                  </a>
+                  <div class="text-black fz-18">
+                    <?php the_field('servicos', get_the_id()); ?>
+                  </div>
                 </div>
               </div>
-            </div>
-            <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
-              Selecionar
-            </a>
-          </div>
-          <div class="col d-flex flex-column align-items-center">
-            <div class="card-plano mb-awe-40">
-              <span class="card-plano__tipo">
-                Anual
-              </span>
-
-              <div class="card-plano__valor">
-                <span>
-                  <span class="fw-regular">R$</span>
-                  <span class="fw-bold">816</span>
-                </span>
-
-                <div class="text-darker-1 fw-medium fz-21">
-                  ou 12x de R$68,00
-                </div>
-              </div>
-            </div>
-            <a href="" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
-              Selecionar
-            </a>
-          </div>
+          <?php
+            endwhile;
+          else : endif;
+          ?>
         </div>
+      </div>
+
+      <div class="col-12 col-lg-10 mt-awe-64">
+        <p class="fz-18 text-darker-1 lh-160">
+          Precisa de um plano sob medida para o seu negócio, entre em contato com nosso time de consultores.
+        </p>
       </div>
     </div>
   </div>
