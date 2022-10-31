@@ -165,3 +165,10 @@ function custom_post_type_planos()
     ));
 }
 add_action('init', 'custom_post_type_planos');
+
+// ACF options page
+
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page();
+}

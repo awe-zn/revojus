@@ -119,9 +119,53 @@
     </div>
 
     <div id="form-equipe">
-      <?php echo do_shortcode('[contact-form-7 id="6" title="Formulário de equipe"]'); ?>
+      <?php echo do_shortcode(get_field('shortcode_do_formulario'), get_the_id()); ?>
     </div>
+    <!-- Feedback de envio do formulário -->
+    <div class="modal fade form-feedback" id="form-equipe-feedback" tabindex="-1" aria-labelledby="formFeedback" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon.svg" class="d-none d-md-block" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon-sm.svg" class="d-md-none" alt="">
+          </button>
+          <div>
+            <div class="d-flex justify-content-center mb-awe-32">
+              <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/form-success.svg">
+            </div>
+            <p class="fz-24 text-main fw-bold mb-awe-16 text-center">
+              Enviado com <span class="text-secondary">sucesso</span>!
+            </p>
+            <p class="text-main fz-16 text-center">
+              Seu cadastro agora passará pela nossa diretoria e em breve entraremos em contato com você. Obrigado!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Feedback de envio do formulário -->
   </div>
 </section>
+
+<script>
+  let formEquipeFeedback;
+  if (document.querySelector('#form-equipe-feedback')) {
+    formEquipeFeedback = new bootstrap.Modal('#form-equipe-feedback', {
+      keyboard: false,
+    });
+  }
+
+  document.addEventListener(
+    'wpcf7mailsent',
+    function(event) {
+      const id = event.detail.contactFormId;
+
+      if (id === <?php get_field('id_do_formulario', get_the_id()); ?>) {
+        formEquipeFeedback.show();
+      }
+    },
+    false
+  );
+</script>
 
 <?php get_footer(); ?>

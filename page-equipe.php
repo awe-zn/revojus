@@ -68,29 +68,6 @@
         <a href="<?php echo home_url('/captura'); ?>" class="btn btn-secondary rounded-1 px-awe-24 py-awe-12 fw-bold fz-16 text-light-2">
           Conhecer mais da Revojus
         </a>
-        <!-- Feedback de envio do formulário -->
-        <div class="modal fade form-feedback" id="form-equipe-feedback" tabindex="-1" aria-labelledby="formFeedback" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon.svg" class="d-none d-md-block" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/close-icon-sm.svg" class="d-md-none" alt="">
-              </button>
-              <div>
-                <div class="d-flex justify-content-center mb-awe-32">
-                  <img src="<?php echo get_template_directory_uri(); ?>/dist/img/svg/form-success.svg">
-                </div>
-                <p class="fz-24 text-main fw-bold mb-awe-16 text-center">
-                  Enviado com <span class="text-secondary">sucesso</span>!
-                </p>
-                <p class="text-main fz-16 text-center">
-                  Seu cadastro agora passará pela nossa diretoria e em breve entraremos em contato com você. Obrigado!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /Feedback de envio do formulário -->
       </div>
     </div>
   </div>
